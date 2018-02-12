@@ -3,7 +3,7 @@
 | [discuss](https://github.com/timm/ish/issues)
 | [contribute](https://github.com/timm/ish/blob/master/CONTRIB.md)
 | [cite](https://github.com/timm/ish/blob/master/CITATION.md)
-| [license](https://github.com/timm/ish/blob/master/LICENSE.md)    
+| [&copy; 2018](https://github.com/timm/ish/blob/master/LICENSE.md)    
 [![](https://raw.githubusercontent.com/timm/ish/master/etc/img/banner.png)](https://github.com/timm/ish/blob/master/README.md)
 
 # A  Toolbox of Useful (ish) LISP Functions
