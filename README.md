@@ -4,7 +4,8 @@
 | [discuss](https://github.com/timm/ish/issues)
 | [contribute](https://github.com/timm/ish/blob/master/CONTRIB.md)
 | [cite](https://github.com/timm/ish/blob/master/CITATION.md)
-| [&copy; 2018](https://github.com/timm/ish/blob/master/LICENSE.md)    
+| [&copy; 2018](https://github.com/timm/ish/blob/master/LICENSE.md)
+
 ______
 
 # A  Toolbox of Useful (ish) LISP Functions
