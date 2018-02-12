@@ -1,4 +1,7 @@
-# ISH : a useful-ish LISP library
+[![](https://raw.githubusercontent.com/timm/ish/master/etc/img/banner.png)](https://github.com/timm/ish/blob/master/README.md)
+
+# A  Toolbox of Useful(ish) LISP Functions
+
 
 Each file `X.lisp` knows its own dependancies so can be loaded seperately
 to all the rest. E.g. (in clisp):
