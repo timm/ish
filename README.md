@@ -8,7 +8,7 @@
 
 ______
 
-# A  Bunch of Useful (ish) LISP Functions
+# Some  Useful (ish) LISP Code
 
 ## Install
 
