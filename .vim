@@ -47,5 +47,6 @@ set lispwords+=until
 set lispwords+=while
 set lispwords+=doitems
 set lispwords+=doh
-set lispwords+=aif
+set lispwords+=defone
+set lispwords+=defmemo
 

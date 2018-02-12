@@ -1,5 +1,7 @@
+; the greatest meta function of all
 (defun noop (&rest lst) lst)
 
+; other stuff
 (defmacro defone (fn args &body body)
   "Define a memoized function."
   `(memoize (defun ,fn ,args . ,body)))
@@ -28,3 +30,7 @@
   (setf (symbol-function fn-name)
         (memo (symbol-function fn-name)
               :name fn-name :key key :test test)))
+
+(defmacro defmemo (fn args &body body)
+  `(memoize (defun ,fn ,args . ,body)
+            :key #'(lambda (args) (first args))))

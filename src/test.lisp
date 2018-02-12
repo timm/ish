@@ -7,7 +7,7 @@
      (format t "~&~%;;; ~a~%; ~a~%" ',name ,doc)
      ,@body))
 
-(let ((pass 0) (fail 0.000001))
+(let ((pass 0) (fail 0))
   (defun test (want got)
     (cond ((equalp want got) (incf pass))
           (t (incf fail)
@@ -18,6 +18,6 @@
       (when (or force (not (member :dont-test *features*)))
         (mapc #'funcall  (reverse *tests*))
         (format t "~&~%; pass : ~a = ~5,1f% ~%; fail : ~a = ~5,1f% ~%"
-                pass (* 100 (/ pass (+ pass fail)))
-                fail (* 100 (/ fail (+ pass fail)))))))
+                pass (* 100 (/ pass (+ 0.0001 pass fail)))
+                fail (* 100 (/ fail (+ 0.0001 pass fail)))))))
 )

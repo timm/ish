@@ -3,7 +3,11 @@
   "test"
   "macro")
 
-(deftest doitems! ()
+(deftest _aif ()
+  (if (- 10 5)
+    (print `(it ,it))))
+
+(deftest _doitems ()
   "seeking association list"
   (let* ((out)
          (lst '(a b c d)))
