@@ -19,13 +19,13 @@ See [CONTRIB.md](CONTRIB.md)
 
 ### Editing
 
-   cd src
-   vim -u ../.vim X.lisp
+      cd src
+      vim -u ../.vim X.lisp
 
 ### Gitting
 
-   git pull
-   git commit -am "updating"; git push
+      git pull
+      git commit -am "updating"; git push
 
 ### Running Files
 
