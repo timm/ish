@@ -11,7 +11,23 @@ To test this all works, then
       cd ish/src
       clisp tests
 
-## Files
+## How to Contrib
+
+See [CONTRIB.md](CONTRIB.md)
+
+## Tips
+
+### Editing
+
+   cd src
+   vim -u ../.vim X.lisp
+
+### Gitting
+
+   git pull
+   git commit -am "updating"; git push
+
+### Running Files
 
 Each file `X.lisp` knows its own dependancies so can be loaded seperately
 to all the rest. E.g. (in clisp):
@@ -28,6 +44,8 @@ To run  `X.lisp`'s  unit tests, just load its tutorial:
 
       cd src
       clisp Xok
+
+### Regression Suite
 
 To run all the unit tests, run:
   
@@ -68,6 +86,4 @@ That code outputs something like the following:
 Note the last line-- the ISH test suite has one failure built (so we can test that the unit tests
 can catch failing tests).
 
-## How to Contrib
 
-See [CONTRIB.md](CONTRIB.md)
