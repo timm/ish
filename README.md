@@ -2,6 +2,16 @@
 
 # A  Toolbox of Useful (ish) LISP Functions
 
+## Install
+
+      git clone http://github.com/timm/ish
+
+To test this all works, then
+
+      cd ish/src
+      clisp tests
+
+## Files
 
 Each file `X.lisp` knows its own dependancies so can be loaded seperately
 to all the rest. E.g. (in clisp):
@@ -58,35 +68,6 @@ That code outputs something like the following:
 Note the last line-- the ISH test suite has one failure built (so we can test that the unit tests
 can catch failing tests).
 
-## Code files
+## How to Contrib
 
-To write a file for `ISH`, add the following two lines as a header:
-
-      #-base (load "base")
-      (uses "other" "files" "to" "load")
-
-- The first line loads ISH's `base` code (if it has not already been loaded.
-- The second line loads all other files, but again, only if they have 
-not been loaded before.
-
-## Unit test files
-
-To write unit tests for `ISH` for file `X.lisp`,
-create a file `Xok.lisp` whose first lines are:
-
-      #-base (load "base")
-      (uses
-        "tests"
-        "X" ; the code you want to test
-      )
-
-- In that file, write a function with the tests;
-- Add `(test want got)` calls inside the function to check
-  that the right tigns are being returned;
-- Change the function's `defun` to `deftest`
-
-Nest, at the last line of the `Xok.lisp`, add this line:
-
-    (tests)
-
-Enjoy!
+See [CONTRIB.md](CONTRIB.md)
