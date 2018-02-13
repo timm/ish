@@ -7,7 +7,7 @@
 | [&copy; 2018](https://github.com/timm/ish/blob/master/LICENSE.md)
 
 
-<img  src="https://zenodo.org/badge/doi/10.5281/zenodo.1172230.svg"> 
+[![](https://zenodo.org/badge/doi/10.5281/zenodo.1172230.svg)](https://github.com/timm/ish/blob/master/CITATION.md)
 
 
 ______
