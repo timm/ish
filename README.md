@@ -12,6 +12,7 @@
 
 ______
 
+# Welcome!
 
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
 
