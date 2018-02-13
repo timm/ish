@@ -18,17 +18,24 @@ I have spent too much of my life configuration new machines
 to run old code.
 No more. Here in this repo is code that can be downloaded and executed 
 straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform.
-No bash aliases. No shell variables. No initialization of a package management system.
-No config files written outside of these directories. No ``just install these 17 packages
-inside the code editor''. Just install your LISP (e.g. clisp), download this code, and go. 
+
+- No bash aliases to create.
+- No shell variables to set.
+- No initialization of a package management system.
+- No config files written outside of these directories. 
+- And no ``just install these 17 packages inside the code editor''. 
+
+Just install your LISP (e.g. clisp), download this code, and go. 
 
 So please enjoy tinkering with
-all my useful (ish)  LISP tricks.
+all my useful (ish)  LISP tricks. To help you along,
+my code has no  huge monoliths. Instead:
 
-- No huge monoliths. All code divides into lots of small files, independently executable and understandable.
-   - All my files know their own dependencies so, to explore my code, load anything into LISP and see what happens
+- All code divides into lots of small files, independently executable and understandable.
+- All  code files know their own dependencies so, to explore my code, load anything into LISP and see what happens
 - If you want little worked examples on how to use code in any `X.lisp` file, look for `Xok.lisp`.
-- And if (overall) you don't like what you see, kill it all with no side-effects using `rm -rf ish`.
+
+Best of all, if none of this impresses you, you can kill it all with no side-effects using `rm -rf ish`.
 
 Enjoy!
 
