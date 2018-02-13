@@ -19,7 +19,7 @@
   #+sbcl sb-ext:*posix-argv*
   #+allegro (sys:command-line-arguments))
 
-(defun done ()
+(defun stop ()
   #+sbcl (sb-ext:exit)
   #+:clisp (ext:exit)
   #+allegro (excl:exit))
