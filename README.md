@@ -29,17 +29,27 @@ like what you see, kill it all with no side-effects using `rm -rf ish`.
 Note: this code has been tested
 on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
-I need a tester for someone using Allegro. Any takers?
+I need a tester for Allegro. Anyone?
 
 ## Install
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
 
+Install `clisp` or `sbcl` then clone this repo
 
       git clone http://github.com/timm/ish
 
+Or download and unpack all the zipped files:
+
+      wget https://github.com/timm/ish/archive/master.zip
+      unzip master.zip
+
 To test this all works, then
 
+      # if you cloned it
       cd ish/src
+      # if you unzipped it
+      cd ish-master/src
+      # then run the tests
       clisp tests
       # or
       sbcl --script tests.lisp
