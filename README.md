@@ -10,10 +10,7 @@ ______
 
 # Some  Useful (ish) LISP Code
 
-Tested on 
-
-- CLISP <img src="https://clisp.sourceforge.io/clisp.png" height=30>
-- SBCL <img src="http://www.sbcl.org/sbclbutton.png" height=30>  
+Tested on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
 
 ## Install
 
