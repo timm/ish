@@ -34,22 +34,31 @@ I need a tester for Allegro. Anyone?
 ## Install
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
 
-Install `clisp` or `sbcl` then clone this repo
+### Step1: Install LISP
+
+Install `clisp` or `sbcl`. E.g. on a Mac:
+
+      brew install clisp
+
+### Step2: Get Files  
+
+#### Using`git clone`
 
       git clone http://github.com/timm/ish
+      cd ish
 
-Or download and unpack all the zipped files:
+
+#### Using a zip file
+
 
       wget https://github.com/timm/ish/archive/master.zip
       unzip master.zip
+      cd ish-master
 
-To test this all works, then
+### Step3: Testing your installation
 
-      # if you cloned it
-      cd ish/src
-      # if you unzipped it
-      cd ish-master/src
-      # then run the tests
+
+      cd src
       clisp tests
       # or
       sbcl --script tests.lisp
