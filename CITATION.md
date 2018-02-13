@@ -8,7 +8,14 @@
 
 ______
 
-Tim Menzies. (2018, February 13). Useful (ish) LISP code). Zenodo. http://doi.org/10.5281/zenodo.1172230
+# How to cite this work
+
+
+Useful (ish) LISP code).   
+Tim Menzies.   
+2018, February 13.    
+Zenodo.    
+http://doi.org/10.5281/zenodo.1172230
 
 ```
 @article{timm-ish18,
