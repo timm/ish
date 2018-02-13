@@ -22,9 +22,9 @@ Here, I present together some of their
 most useful LISP tricks (plus a few of my own). Enjoy!
 
 Right now, `ISH` is just a bunch of cool little LISP tools.  But
-the long term goal of this code is to build a workbench for
-experiemnting with programming languages, data mining, and optimization
-(and how those three things can be usefully combined).
+the long term goal of this code is a DSL
+for applications that readily combine
+data mining with optimization.
 
 To help you understand it all,
 my code has no  huge monoliths. Instead:
