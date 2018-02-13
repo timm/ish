@@ -8,4 +8,15 @@
 
 ______
 
-Coming soon
+Tim Menzies. (2018, February 13). Useful (ish) LISP code). Zenodo. http://doi.org/10.5281/zenodo.1172230
+
+```
+@article{timm-ish18,
+   title=     { (Useful (ish) LISP code). }, 
+   DOI=       { 10.5281/zenodo.1172230 }, 
+   publisher= { Zenodo }, 
+   author=    { Tim Menzies }, 
+   year=      { 2018 }, 
+   month=     { Feb }
+}
+```
