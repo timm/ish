@@ -21,11 +21,11 @@ I learn most about programming by reading code from other people.
 Here, I present together some of their 
 most useful LISP tricks (plus a few of my own). Enjoy!
 
-Right now, `ISH` is just a bunch of cool little LISP tools.  But
-the long term goal of this code is a DSL
+The long term goal of this code is a DSL
 for applications that readily combine
 data mining with optimization.
 
+But right now, `ISH` is just a bunch of cool little LISP tools.  
 To help you understand it all,
 my code has no  huge monoliths. Instead:
 
