@@ -15,10 +15,11 @@ ______
 # Lots of code, ready to go
 
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
+
 Please enjoy tinkering with all my useful (ish)  LISP.
 I learn most about programming by reading code from other people.
 Here, I present together some of their 
-most useful LISP tricks (plus a few of my own).
+most useful LISP tricks (plus a few of my own). Enjoy!
 
 To help you along,
 my code has no  huge monoliths. Instead:
@@ -27,14 +28,7 @@ my code has no  huge monoliths. Instead:
 - All  code files know their own dependencies so, to explore my code, load anything into LISP and see what happens
 - If you want little worked examples on how to use code in any `X.lisp` file, look for `Xok.lisp`.
 
-
-So just install your LISP (e.g. `clisp`), download this code, and go.  Enjoy!
-
-Note that
-this code has been tested
-on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
-and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
-I need a tester for Allegro. Anyone?
+So just install your LISP (e.g. `clisp`), download this code, and go. 
 
 ## Uninstall (is easy)
 
@@ -54,6 +48,12 @@ So if none of this code impresses you, you can kill it all with no side-effects 
 Install `clisp` or `sbcl`. E.g. on a Mac:
 
       brew install clisp
+
+Note that
+this code has been tested
+on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
+and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
+I need a tester for Allegro. Anyone?
 
 ### Step2: Get Files  
 
