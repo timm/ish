@@ -14,4 +14,4 @@
 
 ; Set a flag in *features* so we can check in base.lisp
 ; was loaded before.
-(pushnew :base *features*)
+(pushnew :zero  *features*)

@@ -1,4 +1,4 @@
-#-base (load "base")
+#-zero (load "zero")
 (uses "test")
 
 (deftest _aa ()

@@ -1,5 +1,5 @@
 ; convenience file to load by usual stuff
-#-base (load "base")
+#-zero (load "zero")
 
 (uses 
   "macro" 

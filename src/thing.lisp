@@ -2,7 +2,7 @@
 ; Everything is a "thing" with a built in
 ; print method
 
-#-base (load "base")
+#-zero (load "zero")
 (uses "sys")
 
 (defun defslot  (slot x form)

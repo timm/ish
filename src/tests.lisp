@@ -1,4 +1,4 @@
-#-base (load "base")
+#-zero (load "zero")
 
 ; for the moment, disable running tests when we load files
 (pushnew :dont-test *features*)
