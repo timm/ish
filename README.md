@@ -161,7 +161,8 @@ ____
 ## How to Contrib
 
 
-<img src="http://gnss-sdr.org/assets/images/geniuss-contribute.png" width=200 align=left>
+<img src="http://gnss-sdr.org/assets/images/geniuss-contribute.png" width=300>  
+
 See [CONTRIB.md](CONTRIB.md).
 
 
