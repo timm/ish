@@ -16,7 +16,7 @@ ______
 
 Please enjoy tinkering with all my useful (ish)  LISP.
 I learn most about programming by reading code from other people.
-Here, I collect together some of their 
+Here, I present together some of their 
 most useful LISP tricks (plus a few of my own).
 
 To help you along,
@@ -29,10 +29,9 @@ my code has no  huge monoliths. Instead:
 no initialization of a package management system;
 no ``just install these 17 packages inside the code editor''; and most important of all, 
 no config files written outside of these directories. 
+
 So just install your LISP (e.g. `clisp`), download this code, and go. 
-
-
-Best of all, if none of this impresses you, you can kill it all with no side-effects using `rm -rf ish`.
+And if none of this impresses you, you can kill it all with no side-effects using `rm -rf ish`.
 
 Enjoy!
 
