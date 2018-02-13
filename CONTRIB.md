@@ -26,10 +26,11 @@ ______
 
 To write a file for `ISH`, add the following two lines as a header:
 
-      #-base (load "base")
+      #-zero (load "zero")
       (uses "other" "files" "to" "load")
 
-- The first line loads ISH's `base` code (if it has not already been loaded.
+- The first line loads ISH's `zero` code (the base level utils for the whole systems)
+  if they have not already been loaded.
 - The second line loads all other files, but again, only if they have 
 not been loaded before.
 
@@ -38,7 +39,7 @@ not been loaded before.
 To write unit tests for `ISH` for file `X.lisp`,
 create a file `Xok.lisp` whose first lines are:
 
-      #-base (load "base")
+      #-zero (load "zero")
       (uses
         "tests"
         "X" ; the code you want to test
