@@ -12,7 +12,7 @@
 ______
 
 
-# How to Contribute to ISH
+# How to contribute to ISH
 
 ## Process
 

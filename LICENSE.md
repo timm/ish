@@ -11,7 +11,7 @@
 
 ______
 
-# LICENSE
+# License
 
 Copyright (c) 2018, Tim Menzies, tim@menzies.us. All rights reserved.
 
