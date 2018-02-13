@@ -1,5 +1,6 @@
-#-zero (load "zero")
-(uses "test")
+(unless (fboundp 'ish) (load 'ish))
+(ish
+  "test")
 
 (deftest _aa ()
   "should be one failure"

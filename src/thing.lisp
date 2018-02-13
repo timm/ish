@@ -2,8 +2,8 @@
 ; Everything is a "thing" with a built in
 ; print method
 
-#-zero (load "zero")
-(uses "sys")
+(unless (fboundp 'ish) (load 'ish))
+(ish "sys")
 
 (defun defslot  (slot x form)
   `(,slot

@@ -1,5 +1,5 @@
-#-zero (load "zero")
-(uses 
+(unless (fboundp 'ish) (load 'ish))
+(ish 
   "test"
   "thing")
 
