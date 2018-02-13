@@ -21,13 +21,12 @@ I learn most about programming by reading code from other people.
 Here, I present together some of their 
 most useful LISP tricks (plus a few of my own). Enjoy!
 
-Right now, `ISH` is just a bunch of cool little LISP tools.
-But the long term 
-goal of this code is to build a workbench  
-for experiemnting with programming languages, data mining, and optimization
+Right now, `ISH` is just a bunch of cool little LISP tools.  But
+the long term goal of this code is to build a workbench for
+experiemnting with programming languages, data mining, and optimization
 (and how those three things can be usefully combined).
 
-To help you along,
+To help you understand it all,
 my code has no  huge monoliths. Instead:
 
 - All code divides into lots of small files, independently executable and understandable.
