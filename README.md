@@ -15,7 +15,11 @@ ______
 I have spent too much of my life configuration new machines
 to run old code.
 No more. Here in this repo is code that can be downloaded and executed 
-straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform. 
+straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform.
+No bash aliases. No shell variables. No initialization of a package management system.
+No config files written outside of these directories. No ``just install these 17 packages
+inside the code editor''. Just load and go. And if you don't
+like what you see, kill it all with no side-effects using `rm -rf ish`.
 
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
