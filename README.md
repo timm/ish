@@ -42,6 +42,9 @@ I've been collecting my favorite VIM configs for editing files
       git pull
       git commit -am "updating"; git push
 
+Note that this distribution comes with a [.gitignore](.gitignore) that blocks
+the usual temporaries from getting inappropriately added to git.
+
 ### Running Files
 
 Each file `X.lisp` knows its own dependancies so can be loaded seperately
