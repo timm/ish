@@ -10,10 +10,9 @@ ______
 
 # How to cite this work
 
-
 Useful (ish) LISP code).   
 Tim Menzies.   
-2018, February 13.    
+February 13, 2018   
 Zenodo.    
 http://doi.org/10.5281/zenodo.1172230
 
