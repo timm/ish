@@ -19,7 +19,7 @@ ______
 Please enjoy tinkering with all my useful (ish)  LISP code.
 I learn most about programming by reading code from other people.
 Here, I present together some of their 
-most useful LISP tricks (plus a few of my own). Enjoy!
+most useful LISP tricks (plus a few of my own). Have fun!
 
 The long term goal of this code is a DSL
 for applications that readily combine
