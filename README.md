@@ -113,4 +113,10 @@ I've been collecting my favorite VIM configs for editing files
 Note that this distribution comes with a [.gitignore](.gitignore) that blocks
 the usual temporaries from getting inappropriately added to git.
 
+### Annoyances
+
+This code was written to run in SBCL and CLISP. These implementations of LISP
+go their own seperate ways on many things, including CLOS. When I just cannot resolve
+their differing approaches, I do something to dodge the problem (e.g. go to `defstruct`
+rather than `defclass`, or building my own simpler class system called `defthing`).
 
