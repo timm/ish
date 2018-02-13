@@ -14,6 +14,7 @@ ______
 
 # Lots of code, ready to go
 
+<img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
 Please enjoy tinkering with all my useful (ish)  LISP.
 I learn most about programming by reading code from other people.
 Here, I present together some of their 
@@ -25,24 +26,28 @@ my code has no  huge monoliths. Instead:
 - All code divides into lots of small files, independently executable and understandable.
 - All  code files know their own dependencies so, to explore my code, load anything into LISP and see what happens
 - If you want little worked examples on how to use code in any `X.lisp` file, look for `Xok.lisp`.
-- This code is easy to install. It needs no bash aliases; no magic shell variables that must be set;
-no initialization of a package management system;
-no ``just install these 17 packages inside the code editor''; and most important of all, 
-no config files written outside of these directories. 
-- So just install your LISP (e.g. `clisp`), download this code, and go. 
 
-Enjoy!
 
-Note that:
+So just install your LISP (e.g. `clisp`), download this code, and go.  Enjoy!
 
-- If none of this code impresses you, you can kill it all with no side-effects using `rm -rf ish`.
-- This code has been tested
+Note that
+this code has been tested
 on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
 I need a tester for Allegro. Anyone?
 
-## Install
-<img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
+## Uninstall (is easy)
+
+
+This code needs no bash aliases; no magic shell variables that must be set;
+no initialization of a package management system;
+no ``just install these 17 packages inside the code editor''; and most important of all, 
+no config files written outside of these directories. 
+
+So if none of this code impresses you, you can kill it all with no side-effects using `rm -rf ish`.
+
+
+## Install (is easy)
 
 ### Step1: Install LISP
 
