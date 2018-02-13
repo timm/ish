@@ -13,7 +13,7 @@ ______
 
 # How to cite this work
 
-Useful (ish) LISP code).   
+(Useful (ish) LISP code).   
 Tim Menzies.   
 February 13, 2018   
 Zenodo.    
