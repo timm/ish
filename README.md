@@ -15,7 +15,7 @@ ______
 I have spent too much of my life configuration new machines
 to run old code.
 No more. Here in this repo is code that can be downloaded and executed 
-straight "out of the box" (by a LISP interpreter) on Mac on \*nix. 
+straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform. 
 
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
