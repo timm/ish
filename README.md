@@ -12,7 +12,7 @@
 
 ______
 
-# Lots of useful (ish) code, ready to go
+# Lots of useful (ish) LISP, ready to go
 
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
 
