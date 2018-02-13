@@ -13,7 +13,7 @@ ______
 
 # How to cite this work
 
-(Useful (ish) LISP code).   
+(Some (Useful (ish)) LISP).   
 Tim Menzies.   
 February 13, 2018   
 Zenodo.    
@@ -21,7 +21,7 @@ http://doi.org/10.5281/zenodo.1172230
 
 ```
 @article{timm-ish18,
-   title=     { (Useful (ish) LISP code). }, 
+   title=     { (Some (Useful (ish)) LISP). }, 
    DOI=       { 10.5281/zenodo.1172230 }, 
    publisher= { Zenodo }, 
    author=    { Tim Menzies }, 
