@@ -25,9 +25,8 @@ The long term goal of this code is a DSL
 for applications that readily combine
 data mining with optimization.
 
-But right now, `ISH` is just a bunch of cool little LISP tools.  
-To help you understand it all,
-my code has no  huge monoliths. Instead:
+But right now, `ISH` is just a bunch of cool little LISP tools.  To
+help you understand it all, my code has no  huge monoliths. Instead:
 
 - All code divides into lots of small files, independently executable and understandable.
 - All  code files know their own dependencies so, to explore my code, load anything into LISP and see what happens
