@@ -18,16 +18,18 @@ No more. Here in this repo is code that can be downloaded and executed
 straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform.
 No bash aliases. No shell variables. No initialization of a package management system.
 No config files written outside of these directories. No ``just install these 17 packages
-inside the code editor''. Just load and go. And if you don't
-like what you see, kill it all with no side-effects using `rm -rf ish`.
+inside the code editor''. Just load and go. 
 
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
+And if you don't
+like what you see, kill it all with no side-effects using `rm -rf ish`.
 
 
-This code has been tested
+Note: this code has been tested
 on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
+I need a tester for someone using Allegro. Any takers?
 
 ## Install
 <img align=right src="http://www.lisperati.com/lisplogo_warning_256.png">
