@@ -12,6 +12,8 @@
 
 ______
 
+# Lots of code, ready to go
+
 I have spent too much of my life configuration new machines
 to run old code.
 No more. Here in this repo is code that can be downloaded and executed 
