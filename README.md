@@ -23,27 +23,13 @@ To test this all works, then
       # or
       sbcl --script tests.lisp
 
+This should execute dozens of tests, one of which will fail (just to show that the test engine can catch failing tests).
+
 ## How to Contrib
 
 See [CONTRIB.md](CONTRIB.md)
 
 ## Tips
-
-### Editing
-
-I've been collecting my favorite VIM configs for editing files
-(in general) and editing LISP (in partciular). These can be access via:
-
-      cd src
-      vim -u ../.vim X.lisp
-
-### Gitting
-
-      git pull
-      git commit -am "updating"; git push
-
-Note that this distribution comes with a [.gitignore](.gitignore) that blocks
-the usual temporaries from getting inappropriately added to git.
 
 ### Running Files
 
@@ -109,5 +95,21 @@ That code outputs something like the following:
 
 Note the last line-- the ISH test suite has one failure built (so we can test that the unit tests
 can catch failing tests).
+
+### Editing
+
+I've been collecting my favorite VIM configs for editing files
+(in general) and editing LISP (in partciular). These can be access via:
+
+      cd src
+      vim -u ../.vim X.lisp
+
+### Gitting
+
+      git pull
+      git commit -am "updating"; git push
+
+Note that this distribution comes with a [.gitignore](.gitignore) that blocks
+the usual temporaries from getting inappropriately added to git.
 
 
