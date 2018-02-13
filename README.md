@@ -29,15 +29,6 @@ See [CONTRIB.md](CONTRIB.md)
 
 ## Tips
 
-### Execution
-
-The following two forms run code in `X.lisp`
-using either `clisp`
-or `sbcl`.
-
-     clisp X
-     scbl --script X.lisp
-
 ### Editing
 
 I've been collecting my favorite VIM configs for editing files
@@ -58,6 +49,8 @@ to all the rest. E.g. (in clisp):
 
       cd src
       clisp X
+      # or
+      sbcl --script X.lisp
 
 Most files `X.lisp` comes with a  little executable tutorial on
 how to use it in `Xok.lisp`.
@@ -68,6 +61,8 @@ To run  `X.lisp`'s  unit tests, just load its tutorial:
 
       cd src
       clisp Xok
+      # or
+      sbcl --script Xok.lisp
 
 ### Regression Suite
 
@@ -75,6 +70,8 @@ To run all the unit tests, run:
   
       cd src
       clisp tests
+      # or
+      sbcl --script tests.lisp
 
 This loads all the `*ok.lisp` files (in alphabetical order), then runs
 all their tests.
