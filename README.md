@@ -25,7 +25,8 @@ inside the code editor''. Just install your LISP (e.g. clisp), download this cod
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
 
-- All my files know their own dependancies so, to explore my code, load anything into LISP and see what happens
+- No huge monoliths. All code divides into lots of small files, independently executable and understandable.
+   - All my files know their own dependencies so, to explore my code, load anything into LISP and see what happens
 - If you want little worked examples on how to use code in any `X.lisp` file, look for `Xok.lisp`.
 - And if (overall) you don't like what you see, kill it all with no side-effects using `rm -rf ish`.
 
@@ -74,7 +75,7 @@ This should execute dozens of tests, one of which will fail (just to show that t
 
 ### Running Files
 
-Each file `X.lisp` knows its own dependancies so can be loaded seperately
+Each file `X.lisp` knows its own dependencies so can be loaded separately
 to all the rest. E.g. (in clisp):
 
       cd src
@@ -141,7 +142,7 @@ can catch failing tests).
 ### Editing
 
 I've been collecting my favorite VIM configs for editing files
-(in general) and editing LISP (in partciular). These can be access via:
+(in general) and editing LISP (in particular). These can be access via:
 
       cd src
       vim -u ../.vim X.lisp
@@ -157,13 +158,13 @@ the usual temporaries from getting inappropriately added to git.
 ### Annoyances
 
 This code was written to run in SBCL and CLISP. These implementations of LISP
-go their own seperate ways on many things, including CLOS. When I just cannot resolve
+go their own separate ways on many things, including CLOS. When I just cannot resolve
 their differing approaches, I do something to dodge the problem (e.g. go to `defstruct`
 rather than `defclass`, or building my own simpler class system called `defthing`).
 
 ____
 
-## How to Contrib
+## How to Contribute
 
 
 <img src="http://gnss-sdr.org/assets/images/geniuss-contribute.png" width=300>  
