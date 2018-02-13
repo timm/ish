@@ -4,7 +4,7 @@
 (pushnew :dont-test *features*)
 
 ; load files
-(dolist (f (directory "./*ok.lisp")) 
+(dolist (f (directory "./*eg.lisp")) 
   (ish (pathname-name f)))
 
 ; run all tests 
