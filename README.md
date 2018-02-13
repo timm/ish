@@ -93,7 +93,8 @@ That code outputs something like the following:
 ; fail : 1 =  20.0%
 ```
 
-Note the last line-- the ISH test suite has one failure built (so we can test that the unit tests
+Note the last line-- the ISH test suite contains one 
+deliberate failure (so we can test that the unit tests
 can catch failing tests).
 
 ### Editing
