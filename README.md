@@ -10,6 +10,8 @@ ______
 
 # Some  Useful (ish) LISP Code
 
+Tested on both CLISP and SBCL.
+
 ## Install
 
       git clone http://github.com/timm/ish
@@ -18,6 +20,8 @@ To test this all works, then
 
       cd ish/src
       clisp tests
+      # or
+      sbcl --script tests.lisp
 
 ## How to Contrib
 
@@ -25,7 +29,19 @@ See [CONTRIB.md](CONTRIB.md)
 
 ## Tips
 
+### Execution
+
+The following two forms run code in `X.lisp`
+using either `clisp`
+or `sbcl`.
+
+     clisp X
+     scbl --script X.lisp
+
 ### Editing
+
+I've been collecting my favorite VIM configs for editing files
+(in general) and editing LISP (in partciular). These can be access via:
 
       cd src
       vim -u ../.vim X.lisp
