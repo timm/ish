@@ -18,7 +18,7 @@ No more. Here in this repo is code that can be downloaded and executed
 straight "out of the box" (by a LISP interpreter) on Mac or on a \*nix platform.
 No bash aliases. No shell variables. No initialization of a package management system.
 No config files written outside of these directories. No ``just install these 17 packages
-inside the code editor''. Just load and go. 
+inside the code editor''. Just install your LISP (e.g. clisp), download this code, and go. 
 
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
