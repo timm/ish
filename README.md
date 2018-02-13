@@ -12,10 +12,17 @@
 
 ______
 
+I have spent too much of my life configuration new machines
+to run old code.
+No more. Here in this repo is code that can be downloaded and executed 
+straight "out of the box" (by a LISP interpreter) on Mac on \*nix. 
+
+So please enjoy tinkering with
+all my useful (ish)  LISP tricks.
 
 
-
-Tested on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
+This code has been tested
+on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
 
 ## Install
