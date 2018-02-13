@@ -14,7 +14,6 @@ ______
 
 
 
-# (Some  (Useful (ish)) LISP)
 
 Tested on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
