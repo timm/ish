@@ -65,10 +65,6 @@ Install `clisp` or `sbcl`. E.g. on a Mac:
 
 This should execute dozens of tests, one of which will fail (just to show that the test engine can catch failing tests).
 
-## How to Contrib
-
-See [CONTRIB.md](CONTRIB.md)
-
 ## Tips
 
 ### Running Files
@@ -159,4 +155,12 @@ This code was written to run in SBCL and CLISP. These implementations of LISP
 go their own seperate ways on many things, including CLOS. When I just cannot resolve
 their differing approaches, I do something to dodge the problem (e.g. go to `defstruct`
 rather than `defclass`, or building my own simpler class system called `defthing`).
+
+____
+
+## How to Contrib
+
+
+See [CONTRIB.md](CONTRIB.md)
+
 
