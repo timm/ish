@@ -29,13 +29,14 @@ my code has no  huge monoliths. Instead:
 no initialization of a package management system;
 no ``just install these 17 packages inside the code editor''; and most important of all, 
 no config files written outside of these directories. 
-
-So just install your LISP (e.g. `clisp`), download this code, and go. 
-And if none of this impresses you, you can kill it all with no side-effects using `rm -rf ish`.
+- So just install your LISP (e.g. `clisp`), download this code, and go. 
 
 Enjoy!
 
-Note: this code has been tested
+Note that:
+
+- If none of this code impresses you, you can kill it all with no side-effects using `rm -rf ish`.
+- This code has been tested
 on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
 and  SBCL <img  align=middle src="http://www.sbcl.org/sbclbutton.png" height=30>.
 I need a tester for Allegro. Anyone?
