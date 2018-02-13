@@ -24,9 +24,12 @@ inside the code editor''. Just install your LISP (e.g. clisp), download this cod
 
 So please enjoy tinkering with
 all my useful (ish)  LISP tricks.
-And if you don't
-like what you see, kill it all with no side-effects using `rm -rf ish`.
 
+- All my files know their own dependancies so, to explore my code, load anything into LISP and see what happens
+- If you want little worked examples on how to use code in any `X.lisp` file, look for `Xok.lisp`.
+- And if (overall) you don't like what you see, kill it all with no side-effects using `rm -rf ish`.
+
+Enjoy!
 
 Note: this code has been tested
 on CLISP <img align=middle src="https://clisp.sourceforge.io/clisp.png" height=30>
