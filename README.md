@@ -47,6 +47,9 @@ So if none of this code impresses you, you can kill it all with no side-effects 
 
 ## Install (is easy)
 
+All this code was debugged using bash, or zsh, as my REPL
+(which, overall, made my life much simpler than EMACS-slime-ing).
+
 ### Step1: Install LISP
 
 Install `clisp` or `sbcl`. E.g. on a Mac:

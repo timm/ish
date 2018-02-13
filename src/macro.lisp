@@ -1,7 +1,13 @@
+;;;; macro tricks
+
+;;; general stuff
+
 (defmacro aif (test then &optional else)
   "Anaphoric 'if'"
   `(let ((it ,test))
      (if it ,then ,else)))
+
+;;; iteration macros
 
 (defmacro doitems ((one n list &optional out) &body body )
   "Set 'one' and 'n' to each item in a list, and its position."
@@ -19,16 +25,20 @@
      ,out))
 
 (defmacro while (test &body body)
+  "implements 'while' (which is not standard in LISP)"
   `(do ()
        ((not ,test))
      ,@body))
 
 (defmacro until (test &body body)
+  "implements 'until' (which is not standard in LISP)"
   `(while (not ,test)
      ,@body))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; printing macros
+
 (defmacro oprim (x)
+  "worker tool for 'o'"
   `(progn (format t "~&[~a]=[~a] " ',x ,x) ,x))
 
 (defmacro o (&rest l)

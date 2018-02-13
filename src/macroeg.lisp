@@ -1,3 +1,5 @@
+;;;; examples of using macro.lisp
+
 (unless (fboundp 'ish) (load 'ish))
 (ish
   "test"

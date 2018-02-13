@@ -1,3 +1,5 @@
+;;;; examples of using list.lisp
+
 (unless (fboundp 'ish) (load 'ish))
 (ish
   "test"

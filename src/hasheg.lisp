@@ -1,3 +1,5 @@
+;;;; example of using hash.lisp
+
 (unless (fboundp 'ish) (load 'ish))
 (ish 
   "test"

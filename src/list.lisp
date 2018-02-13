@@ -1,4 +1,7 @@
+;;;; tricks for handling lisp lists
+
 (defun l->a (lst)
+  "coerce list to array"
   (make-array (length lst) :initial-contents lst))
 
 (defun select (selector-fn facts)
@@ -6,6 +9,7 @@
   (remove-if-not selector-fn facts))
 
 (defun printm (lsts &key (out t) (sep ",") (underline "-"))
+  "pretty print a list of lists, lining up the columns"
   (let ((sep1 ""))
     (labels
         ((newWidth (old str)

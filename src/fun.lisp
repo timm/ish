@@ -1,18 +1,16 @@
-; the greatest meta function of all
-(defun noop (&rest lst) lst)
+;;;; Functional programming tricks
+;;;; e.g. memoing
 
-; other stuff
-(defmacro defone (fn args &body body)
-  "Define a memoized function."
-  `(memoize (defun ,fn ,args . ,body)))
+;;; General
 
-(defun clear-memoize (fn-name)
-  "Clear the hash table from a memo function."
-  (let ((table (get fn-name 'memo)))
-    (when table (clrhash table))))
+(defun noop (&rest lst) 
+  "the greatest meta function of all"
+  lst)
+
+;;;; Memoingg
 
 (defun memo (fn &key (key #'first) (test #'eql) name)
-  "Return a memo-function of fn."
+  "low-level memoing workhorse"
   (let ((table (make-hash-table :test test)))
     (setf (get name 'memo) table)
     #'(lambda (&rest args)
@@ -23,14 +21,25 @@
               (setf (gethash k table) (apply fn args))))))))
 
 (defun memoize (fn-name
-                 &key (key #'(lambda (args) (slot-value (car args) 'id)))
+                 &key (key #'(lambda (args) (first args)))
                       (test #'eq))
-  "Replace fn-name's global definition with a memoized version."
+  "replace fn-name's global definition with a memoized version."
   (clear-memoize fn-name)
   (setf (symbol-function fn-name)
         (memo (symbol-function fn-name)
               :name fn-name :key key :test test)))
 
+(defun clear-memoize (fn-name)
+  "clear the hash table from a memo function."
+  (let ((table (get fn-name 'memo)))
+    (when table (clrhash table))))
+
 (defmacro defmemo (fn args &body body)
+  "standard memoing functions: indexes on first arg"
+  `(memoize (defun ,fn ,args . ,body)))
+
+(defmacro defone (fn args &body body)
+  "memoing function for structs/instances with an id slot"
   `(memoize (defun ,fn ,args . ,body)
-            :key #'(lambda (args) (first args))))
+            :key (lambda (args) 
+                   (slot-value (car args) 'id))))

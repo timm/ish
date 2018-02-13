@@ -1,4 +1,5 @@
-; convenience file to load by usual stuff
+;;;; load file for all the standard lisp tricks
+
 (unless (fboundp 'ish) (load 'ish))
 (ish 
   "macro" 

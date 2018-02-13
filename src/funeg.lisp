@@ -1,3 +1,5 @@
+;;;; examples of use for fun.lisp
+
 (unless (fboundp 'ish) (load 'ish))
 (ish 
   "test"
@@ -17,5 +19,3 @@
   )
 
 (tests)            
-
-
