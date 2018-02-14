@@ -1,9 +1,3 @@
-(unless (fboundp 'establish) (load 'ish))
-
-(garnish "## ish.lisp
-         
-Main control file for ISH.")
-
 (let ((seen)) ;memory of what was laoded before
   (defun establish (&rest lst)
     "Load a file if it has not been loaded before."
@@ -20,3 +14,9 @@ Main control file for ISH.")
 
 (defun garnish (str &key toc)
   "Output some markdown text." )
+
+(garnish "## ish.lisp
+         
+Main control file for ISH.")
+
+

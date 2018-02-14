@@ -1,10 +1,11 @@
-;;;; My simplications to CLOS
-;;;; Everything is a "thing" with a built-in print method
-
-(unless (fboundp 'ish) (load 'ish))
+(unless (fboundp 'establish) (load 'ish))
 (establish "sys")
+(garnish "## thing.lisp
 
-;;; simple nested accessor for CLOS instances or structs
+My simplications to CLOS
+Everything is a 'thing' with a built-in print method.
+
+### Simple nested accessor for CLOS instances or structs")
 
 (defmacro ? (obj first-slot &rest more-slots)
   "From https://goo.gl/dqnmvH:"
@@ -12,7 +13,7 @@
       `(slot-value ,obj ',first-slot)
       `(? (slot-value ,obj ',first-slot) ,@more-slots)))
 
-;;; defthing (simpler that defclass)
+(garnish "Defthing (simpler that defclass)")
 
 (defun defslot  (slot x form)
   "helper function for defthing"
@@ -28,7 +29,7 @@
   `(defclass ,x (,parent)
      ,(loop for (slot form) in slots collect (defslot slot x form))))
 
-;;; standard methods for all things
+(garnish "Standard methods for all things.")
 
 (defmethod public-slot-names ((it thing))
   "return all thing slots that don't start with '_'"
