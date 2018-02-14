@@ -1,7 +1,9 @@
-;;;; load file for all the standard lisp tricks
+(unless (fboundp 'establish) (load 'ish))
+(garnish "## lib.lisp
+         
+Load file for all the standard lisp tricks.")
 
-(unless (fboundp 'ish) (load 'ish))
-(ish 
+(establish 
   "macro" 
   "hash" 
   "list" 

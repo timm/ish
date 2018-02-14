@@ -1,7 +1,7 @@
 ;;;; examples of use for fun.lisp
 
-(unless (fboundp 'ish) (load 'ish))
-(ish 
+(unless (fboundp 'establish) (load 'ish))
+(establish 
   "test"
   "fun")
 

@@ -1,7 +1,7 @@
 ;;;; examples of how to use string.lisp
 
 (unless (fboundp 'ish) (load 'ish))
-(ish
+(establish
   "test"
   "string")
 

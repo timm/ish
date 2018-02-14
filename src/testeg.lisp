@@ -3,7 +3,7 @@
 ;;;; so we can test our tests recognize bad tests.
 
 (unless (fboundp 'ish) (load 'ish))
-(ish
+(establish
   "test")
 
 (deftest _aa ()

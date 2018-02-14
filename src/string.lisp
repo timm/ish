@@ -1,4 +1,4 @@
-;;;; string process tricks
+(unless (fboundp 'establish) (load 'ish))
 
 (defun nchars (&optional (n 40) (c #\Space))
   "returns 'n' copies of 'c'"

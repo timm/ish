@@ -1,7 +1,11 @@
-;;;; Runs all the unit tests.
-;;;; Loads all tests before executing them
-;;;; so the final count of 'pass' and 'fail'
-;;;; are summed over all unit test files.
+(unless (fboundp 'establish) (load 'ish))
+
+(garnish "## tests.lisp
+         
+Runs all the unit tests.
+Loads all tests before executing them
+so the final count of 'pass' and 'fail'
+are summed over all unit test files.")
 
 (unless (fboundp 'ish) (load 'ish))
 
@@ -10,7 +14,7 @@
 
 ; load files
 (dolist (f (directory "./*eg.lisp")) 
-  (ish (pathname-name f)))
+  (establish (pathname-name f)))
 
 ; run all tests 
 (tests t)

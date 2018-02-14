@@ -1,7 +1,11 @@
-;;;; main control file for ISH.
+(unless (fboundp 'establish) (load 'ish))
+
+(garnish "## ish.lisp
+         
+Main control file for ISH.")
 
 (let ((seen)) ;memory of what was laoded before
-  (defun ish (&rest lst)
+  (defun establish (&rest lst)
     "Load a file if it has not been loaded before."
     (dolist (f lst)
       (when (not (member f seen :test #'equalp))
@@ -13,3 +17,6 @@
         (handler-bind
           ((style-warning #'muffle-warning))
           (load f))))))
+
+(defun garnish (str &key toc)
+  "Output some markdown text." )

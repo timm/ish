@@ -1,7 +1,5 @@
-;;;; examples of using macro.lisp
-
-(unless (fboundp 'ish) (load 'ish))
-(ish
+(unless (fboundp 'establish) (load 'ish))
+(establish
   "test"
   "macro")
 

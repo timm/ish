@@ -1,13 +1,14 @@
-;;;; macro tricks
+(unless (fboundp 'establish) (load 'ish))
+(garnish "## Macro tricks
 
-;;; general stuff
+###  General stuff")
 
 (defmacro aif (test then &optional else)
   "Anaphoric 'if'"
   `(let ((it ,test))
      (if it ,then ,else)))
 
-;;; iteration macros
+(garnish "### Iteration macros")
 
 (defmacro doitems ((one n list &optional out) &body body )
   "Set 'one' and 'n' to each item in a list, and its position."
@@ -35,7 +36,7 @@
   `(while (not ,test)
      ,@body))
 
-;;; printing macros
+(garnish "### Prining macros")
 
 (defmacro _oprim (x)
   "worker tool for 'o'"

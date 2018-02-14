@@ -2,7 +2,7 @@
 ;;;; Everything is a "thing" with a built-in print method
 
 (unless (fboundp 'ish) (load 'ish))
-(ish "sys")
+(establish "sys")
 
 ;;; simple nested accessor for CLOS instances or structs
 

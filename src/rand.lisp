@@ -1,7 +1,10 @@
-;;;; A platform independent random number generator.
-;;;; Not as good as LISP's built in random number generator
-;;;; but I could never figure our how to store or share the seed
-;;;; of that generator. Hence this code.
+(unless (fboundp 'establish) (load 'ish))
+(garnish "## rand.lisp
+         
+A platform independent random number generator.
+Not as good as LISP's built in random number generator
+but I could never figure our how to store or share the seed
+of that generator. Hence this code.")
 
 (let* ((seed0      10013)
        (seed       seed0)

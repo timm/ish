@@ -1,13 +1,17 @@
-;;;; Functional programming tricks
-;;;; e.g. memoing
+(unless (fboundp 'establish) (load 'ish))
 
-;;; General
+(garnish "
+## fun.lisp
+
+Functional programming tricks (e.g. memoing).  
+
+### General")
 
 (defun noop (&rest lst) 
   "the greatest meta function of all"
   lst)
 
-;;;; Memoingg
+(garnish "### Memoing")
 
 (defun memo (fn &key (key #'first) (test #'eql) name)
   "low-level memoing workhorse"
