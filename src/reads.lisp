@@ -11,12 +11,17 @@
 (defun fundoc (x)
   "takes the function documentation string and
   prints it, indented by a little white space"
-  (when (eql 'defun (car x))
-    (unless (char= (elt (symbol-name (second x)) 0) #\_)
-      (format t "~%~(~a~) ~(~a~)~%" (second x) (or (third x) ""))  
-      (if (stringp (fourth x))
-        (dolist (line (string-lines (fourth x)))
-         (format t "    ~a~%" (string-trim " " line)))))))
+  (let ((kind (first x))
+        (name (second x))
+        (args (third x))
+        (doc  (fourth x)))
+    (when (and (member kind '(defun defmacro))
+               (not (char= (elt (symbol-name name) 0) #\_))
+               (stringp doc)
+               (not (equal "" doc)))
+      (format t "~%`~(~a~) ~(~a~)`~%-" name (or args ""))
+      (dolist (line (string-lines doc))
+        (format t "    ~a~%" (string-trim " " line))))))
 
 (defun reads (f &optional (fn #'print))
   "Read  a file, calling 'fn' on each s-expression. "

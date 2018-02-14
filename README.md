@@ -38,17 +38,20 @@ So just install your LISP (e.g. `clisp`), download this code, and go.
 
 
 This code needs no bash aliases; no magic shell variables that must be set;
-no initialization of a package management system;
+no initialization of a package management system (\*);
 no ``just install these 17 packages inside the code editor''; and most important of all, 
 no config files written outside of these directories. 
 
 So if none of this code impresses you, you can kill it all with no side-effects using `rm -rf ish`.
 
+(*) not to rude to the latest generation of LISP package managers 
+(tools like QUICKLISP are very good indeed).
 
 ## Install (is easy)
 
-All this code was debugged using bash, or zsh, as my REPL
-(which, overall, made my life much simpler than EMACS-slime-ing).
+All this code was debugged from the command line,
+so no
+EMACS/Slime config (zsh-- the ultimate REPL!).
 
 ### Step1: Install LISP
 

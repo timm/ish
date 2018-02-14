@@ -37,7 +37,7 @@
 
 ;;; printing macros
 
-(defmacro oprim (x)
+(defmacro _oprim (x)
   "worker tool for 'o'"
   `(progn (format t "~&[~a]=[~a] " ',x ,x) ,x))
 
@@ -45,7 +45,7 @@
   "Print a list of symbols and their bindings."
   (let ((last (gensym)))
     `(let (,last)
-       ,@(mapcar #'(lambda(x) `(setf ,last (oprim ,x))) l)
+       ,@(mapcar #'(lambda(x) `(setf ,last (_oprim ,x))) l)
        (terpri)
        ,last)))
 
