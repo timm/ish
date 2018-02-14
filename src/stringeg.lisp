@@ -9,4 +9,11 @@
   "repeated chars"
   (test "aaa" (nchars 3 #\a)))
 
+(deftest _lines ()
+  (test 4 (length
+            (string-lines "asas
+              vvvv
+              ccc 
+"))))
+
 (tests)            

@@ -11,3 +11,12 @@
   (princ c)
   (finish-output))
 
+(defun string-lines (str)
+  "divide a string into lines"
+  (let* ((nl  #'(lambda (z) (char= z #\Newline)))
+         (pos (position-if nl str)))
+    (if pos
+      (cons (subseq str 0 pos)
+            (string-lines (subseq str (1+ pos)))) 
+      (list str))))
+
