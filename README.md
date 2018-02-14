@@ -44,8 +44,8 @@ no config files written outside of these directories.
 
 So if none of this code impresses you, you can kill it all with no side-effects using `rm -rf ish`.
 
-(*) not to rude to the latest generation of LISP package managers 
-(tools like QUICKLISP are very good indeed).
+(*) not to rude to the latest generation of LISP package managers--
+tools like [QUICKLISP](https://www.quicklisp.org/beta/) are very good indeed.
 
 ## Install (is easy)
 
