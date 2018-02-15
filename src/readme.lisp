@@ -64,7 +64,7 @@ For high-level notes on this work, please see the
     (let ((name (pathname-name f)))
       (unless (ends-with-p name "eg")
         (format t "~%~%<img src='https://goo.gl/m8uxAf' height=7 width=900>")
-        (format t "<img align=right src='https://goo.gl/sE1QLN'  width=100>")
+        (format t "<img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/446946-200.png'  width=100>")
         (reads f #'fundoc)))))
 
 (format t "~a"  +header+)
