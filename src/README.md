@@ -23,7 +23,7 @@ For high-level notes on this work, please see the
 
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [FILE.LISP](file.lisp)
@@ -37,7 +37,7 @@ File handling.
 -   Read  a file, calling 'fn' on each s-expression.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [FUN.LISP](fun.lisp)
@@ -81,7 +81,7 @@ Functional programming tricks (e.g. memoing).
 -   Memoing function for structs/instances with an id slot.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [HASH.LISP](hash.lisp)
@@ -95,7 +95,7 @@ Hash function utilities.
 -   Return the keys of a hash table.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [ISH.LISP](ish.lisp)
@@ -105,7 +105,7 @@ Main control file for ISH.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [LIB.LISP](lib.lisp)
@@ -115,7 +115,7 @@ Load file for all the standard lisp tricks.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [LIST.LISP](list.lisp)
@@ -145,7 +145,7 @@ Tricks for handling lisp lists.
 -   pretty print a list of lists, lining up the columns
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [MACRO.LISP](macro.lisp)
@@ -193,7 +193,7 @@ Tricks for handling lisp lists.
 -   Print a list of symbols and their bindings.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [RAND.LISP](rand.lisp)
@@ -206,7 +206,7 @@ of that generator. Hence this code.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [README.LISP](readme.lisp)
@@ -228,7 +228,7 @@ doc strings are printed.
 -   Reading doco strings.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [STRING.LISP](string.lisp)
@@ -262,7 +262,7 @@ doc strings are printed.
    for every occurence of `str2` in `str1`
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [SYS.LISP](sys.lisp)
@@ -289,7 +289,7 @@ that is implementation dependent.
 -   how to halt the program?
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [TEST.LISP](test.lisp)
@@ -315,7 +315,7 @@ all together by call `tests` with the optional
 -   Create a new test, adding its name to the list of *tests*.
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [TESTS.LISP](tests.lisp)
@@ -328,7 +328,7 @@ are summed over all unit test files.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80
+<img src='https://goo.gl/m8uxAf' height=7 width=900><img align=right src='https://d30y9cdsu7xlg0.cloudfront.net/png/1390580-200.png'  width=80>
 
 
 ## [THING.LISP](thing.lisp)
