@@ -17,7 +17,7 @@ Please see the
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## file.lisp
@@ -31,7 +31,7 @@ File handling.
 -   Read  a file, calling 'fn' on each s-expression.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## fun.lisp
@@ -75,7 +75,7 @@ Functional programming tricks (e.g. memoing).
 -   Memoing function for structs/instances with an id slot.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 Examples of use for fun.lisp
@@ -83,7 +83,7 @@ Examples of use for fun.lisp
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## Hash.lisp
@@ -97,7 +97,7 @@ Hash function utilities.
 -   Return the keys of a hash table.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## Hasheg.lisp
@@ -107,7 +107,7 @@ Example of using hash.lisp.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 `garnish (str &key toc)`
 
 -   Output some markdown text.
@@ -121,7 +121,7 @@ Main control file for ISH.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## lib.lisp
@@ -131,7 +131,7 @@ Load file for all the standard lisp tricks.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## list.lisp
@@ -153,9 +153,9 @@ Tricks for handling lisp lists.
 -   pretty print a list of lists, lining up the columns
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## Macro tricks
@@ -207,9 +207,9 @@ Tricks for handling lisp lists.
 -   Print a list of symbols and their bindings.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## rand.lisp
@@ -222,7 +222,7 @@ of that generator. Hence this code.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## read,me.lisp
@@ -244,7 +244,7 @@ doc strings are printed.
 -   Reading doco strings.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## string.lisp
@@ -264,9 +264,9 @@ doc strings are printed.
 -   divide a string into lines
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## sys,lisp
@@ -293,7 +293,7 @@ that is implementation dependent.
 -   how to halt the program?
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## test.lisp
@@ -319,9 +319,9 @@ all together by call `tests` with the optional
 -   Create a new test, adding its name to the list of *tests*.
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## tests.lisp
@@ -334,7 +334,7 @@ are summed over all unit test files.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
 ## thing.lisp
@@ -371,4 +371,4 @@ Standard methods for all things.
 
 
 
-<img src='https://goo.gl/m8uxAf' height=25 width=900>
+<img src='https://goo.gl/m8uxAf' height=15 width=900>
