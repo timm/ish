@@ -24,9 +24,12 @@
 
 ______
 
+This page is auto-generated using:
 
-Please see the
-[master readme](https://github.com/timm/ish/blob/master/README.md)
+      clisp readme.lisp > README.md
+
+For high-level notes on this work, please see the
+[master readme](https://github.com/timm/ish/blob/master/README.md).
 
 ")
 
@@ -55,7 +58,7 @@ Please see the
                    #'(lambda (x y) (string< (pathname-name x) 
                                             (pathname-name y)))))
     (let ((name (pathname-name f)))
-      (unless (search "eg.lisp" name)
+      (unless (ends-with-p name "eg")
         (format t "~%~%<img src='https://goo.gl/m8uxAf' height=15 width=900>")
         (reads f #'fundoc)))))
 

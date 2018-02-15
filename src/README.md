@@ -11,9 +11,12 @@
 
 ______
 
+This page is auto-generated using:
 
-Please see the
-[master readme](https://github.com/timm/ish/blob/master/README.md)
+      clisp readme.lisp > README.md
+
+For high-level notes on this work, please see the
+[master readme](https://github.com/timm/ish/blob/master/README.md).
 
 
 
@@ -78,14 +81,6 @@ Functional programming tricks (e.g. memoing).
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-Examples of use for fun.lisp
-
-
-
-
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
-
-
 ## Hash.lisp
 
 Hash function utilities.
@@ -95,16 +90,6 @@ Hash function utilities.
 `hash-keys (h)`
 
 -   Return the keys of a hash table.
-
-
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
-
-
-## Hasheg.lisp
-
-Example of using hash.lisp.
-
-
 
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
@@ -152,8 +137,6 @@ Tricks for handling lisp lists.
 
 -   pretty print a list of lists, lining up the columns
 
-
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
@@ -209,8 +192,6 @@ Tricks for handling lisp lists.
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
-
 
 ## rand.lisp
 
@@ -263,8 +244,20 @@ doc strings are printed.
 
 -   divide a string into lines
 
+`starts-with-p (str1 str2)`
 
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
+-   Determine whether `str1` starts with `str2`
+
+`ends-with-p (str1 str2)`
+
+-   Determine whether `str1` ends with `str2`
+
+`containsp (str1 str2)`
+
+-   Determine whether `str1` contains `str2`.
+   Instead of just returning T, return a list of starting locations
+   for every occurence of `str2` in `str1`
+
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
@@ -321,8 +314,6 @@ all together by call `tests` with the optional
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
-
 
 ## tests.lisp
 
@@ -369,6 +360,3 @@ Defthing (simpler that defclass).
 Standard methods for all things.
 
 
-
-
-<img src='https://goo.gl/m8uxAf' height=15 width=900>
