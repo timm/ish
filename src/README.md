@@ -15,7 +15,9 @@ ______
 Please see the
 [master readme](https://github.com/timm/ish/blob/master/README.md)
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## file.lisp
@@ -27,7 +29,9 @@ File handling.
 `reads (f &optional (fn #'print) (str t))`
 
 -   Read  a file, calling 'fn' on each s-expression.
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## fun.lisp
@@ -69,13 +73,17 @@ Functional programming tricks (e.g. memoing).
 `defone (fn args &body body)`
 
 -   Memoing function for structs/instances with an id slot.
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 Examples of use for fun.lisp
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## Hash.lisp
@@ -87,7 +95,9 @@ Hash function utilities.
 `hash-keys (h)`
 
 -   Return the keys of a hash table.
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## Hasheg.lisp
@@ -95,7 +105,9 @@ Hash function utilities.
 Example of using hash.lisp.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 `garnish (str &key toc)`
 
 -   Output some markdown text.
@@ -107,7 +119,9 @@ Example of using hash.lisp.
 Main control file for ISH.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## lib.lisp
@@ -115,7 +129,9 @@ Main control file for ISH.
 Load file for all the standard lisp tricks.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## list.lisp
@@ -135,7 +151,11 @@ Tricks for handling lisp lists.
 `printm (lsts &key (out t) (sep ,) (underline -))`
 
 -   pretty print a list of lists, lining up the columns
-<img src='https://goo.gl/m8uxAf' width=50><img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## Macro tricks
@@ -185,7 +205,11 @@ Tricks for handling lisp lists.
 `o (&rest l)`
 
 -   Print a list of symbols and their bindings.
-<img src='https://goo.gl/m8uxAf' width=50><img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## rand.lisp
@@ -196,7 +220,9 @@ but I could never figure our how to store or share the seed
 of that generator. Hence this code.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## read,me.lisp
@@ -216,7 +242,9 @@ doc strings are printed.
 `readme `
 
 -   Reading doco strings.
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## string.lisp
@@ -234,7 +262,11 @@ doc strings are printed.
 `string-lines (str)`
 
 -   divide a string into lines
-<img src='https://goo.gl/m8uxAf' width=50><img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## sys,lisp
@@ -259,7 +291,9 @@ that is implementation dependent.
 `stop `
 
 -   how to halt the program?
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## test.lisp
@@ -283,7 +317,11 @@ all together by call `tests` with the optional
 `deftest (name params &optional (doc ) &body body)`
 
 -   Create a new test, adding its name to the list of *tests*.
-<img src='https://goo.gl/m8uxAf' width=50><img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## tests.lisp
@@ -294,7 +332,9 @@ so the final count of 'pass' and 'fail'
 are summed over all unit test files.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
 
 
 ## thing.lisp
@@ -329,4 +369,6 @@ Defthing (simpler that defclass).
 Standard methods for all things.
 
 
-<img src='https://goo.gl/m8uxAf' width=50>
+
+
+<img src='https://goo.gl/m8uxAf' height=50>
