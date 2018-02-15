@@ -56,6 +56,7 @@ Please see the
                                             (pathname-name y)))))
     (let ((name (pathname-name f)))
       (unless (search "eg.lisp" name)
+        (format t "<img src='https://goo.gl/m8uxAf' width=50>")
         (reads f #'fundoc)))))
 
 (format t "~a"  +header+)
