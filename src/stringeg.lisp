@@ -10,6 +10,7 @@
   (test "aaa" (nchars 3 #\a)))
 
 (deftest _lines ()
+  "Breaking strings into lines."
   (test 4 (length
             (string-lines "asas
               vvvv

@@ -15,13 +15,16 @@
   (finish-output))
 
 (defun string-lines (str)
-  "divide a string into lines"
-  (let* ((nl  #'(lambda (z) (char= z #\Newline)))
-         (pos (position-if nl str)))
-    (if pos
-      (cons (subseq str 0 pos)
-            (string-lines (subseq str (1+ pos)))) 
-      (list str))))
+  "Convert a string to a list of lines."
+  (labels 
+    ((worker (pos0)
+       (let* ((nl  #'(lambda (z) (char= z #\Newline)))
+              (pos (position-if nl str :start pos0)))
+         (if pos
+           (cons (subseq str pos0 pos) 
+                 (worker (1+ pos)))
+           (list (subseq str pos0))))))
+    (worker 0))) 
 
 (defun starts-with-p (str1 str2)
   "Determine whether `str1` starts with `str2`"
