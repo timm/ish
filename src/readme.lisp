@@ -29,7 +29,7 @@ ______
 
 This page is auto-generated using:
 
-      clisp readme.lisp > README.md
+      clisp readme > README.md
 
 For high-level notes on this work, please see the
 [master readme](https://github.com/timm/ish/blob/master/README.md).
