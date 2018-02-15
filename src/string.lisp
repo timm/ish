@@ -1,4 +1,7 @@
-(unless (fboundp 'establish) (load 'ish))
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;;
+;;;; ## string.lisp
+;;;; ")
 
 (defun nchars (&optional (n 40) (c #\Space))
   "returns 'n' copies of 'c'"

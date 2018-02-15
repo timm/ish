@@ -1,3 +1,13 @@
+(defun garnish (str &key toc)
+  "Output some markdown text." )
+
+(garnish "
+;;;;
+;;;; ## ish.lisp
+;;;; 
+;;;; Main control file for ISH.
+;;;; ")
+
 (let ((seen)) ;memory of what was laoded before
   (defun establish (&rest lst)
     "Load a file if it has not been loaded before."
@@ -11,12 +21,5 @@
         (handler-bind
           ((style-warning #'muffle-warning))
           (load f))))))
-
-(defun garnish (str &key toc)
-  "Output some markdown text." )
-
-(garnish "## ish.lisp
-         
-Main control file for ISH.")
 
 

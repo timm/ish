@@ -1,7 +1,9 @@
-(unless (fboundp 'establish) (load 'ish))
-(garnish "## list.lisp
-         
-Tricks for handling lisp lists.")
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;;
+;;;; ## list.lisp
+;;;;         
+;;;; Tricks for handling lisp lists.
+;;;; ")
 
 (defun l->a (lst)
   "coerce list to array"

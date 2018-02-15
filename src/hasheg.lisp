@@ -1,6 +1,10 @@
-;;;; example of using hash.lisp
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;;
+;;;; ## Hasheg.lisp
+;;;;
+;;;; Example of using hash.lisp.
+;;;; ")
 
-(unless (fboundp 'establish) (load 'ish))
 (establish 
   "test"
   "hash")

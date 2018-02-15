@@ -1,14 +1,21 @@
-(unless (fboundp 'establish) (load 'ish))
-(garnish "## Macro tricks
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;;
+;;;; ## Macro tricks
+;;;;
 
-###  General stuff")
+;;;;
+;;;; ###  General stuff
+;;;; ")
 
 (defmacro aif (test then &optional else)
   "Anaphoric 'if'"
   `(let ((it ,test))
      (if it ,then ,else)))
 
-(garnish "### Iteration macros")
+(garnish "
+;;;
+;;; ### Iteration macros
+;;; ")
 
 (defmacro doitems ((one n list &optional out) &body body )
   "Set 'one' and 'n' to each item in a list, and its position."
@@ -36,7 +43,10 @@
   `(while (not ,test)
      ,@body))
 
-(garnish "### Prining macros")
+(garnish "
+;;;
+;;; ### Prining macros
+;;; ")
 
 (defmacro _oprim (x)
   "worker tool for 'o'"
@@ -49,5 +59,3 @@
        ,@(mapcar #'(lambda(x) `(setf ,last (_oprim ,x))) l)
        (terpri)
        ,last)))
-
-

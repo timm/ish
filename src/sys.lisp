@@ -1,8 +1,10 @@
-(unless (foundp 'establish) (load 'ish))
-(garnish "## sys,lisp
-         
-Here I'm attempting to localize all the stuff
-that is implementation dependent.")
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;; 
+;;;; ## sys,lisp
+;;;;    
+;;;; Here I'm attempting to localize all the stuff
+;;;; that is implementation dependent.
+;;;; ")
 
 (defun klass-slots (it)
   "what are the slots of a class?"
