@@ -17,6 +17,12 @@
               ccc 
 "))))
 
+(dolist (x (string-lines "asas
+                         vvvv
+                         ccc
+"))
+  (print x))
+
 (deftest _stats-ends-contains ()
   (test t       (starts-with-p "foobar"  "foo"))
   (test nil     (starts-with-p "foobar"  "bar"))

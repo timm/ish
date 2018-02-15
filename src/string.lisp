@@ -14,17 +14,17 @@
   (princ c)
   (finish-output))
 
-(defun string-lines (str)
+(defun string-lines (str &aux pos)
   "Convert a string to a list of lines."
   (labels 
-    ((worker (pos0)
-       (let* ((nl  #'(lambda (z) (char= z #\Newline)))
-              (pos (position-if nl str :start pos0)))
-         (if pos
-           (cons (subseq str pos0 pos) 
-                 (worker (1+ pos)))
-           (list (subseq str pos0))))))
-    (worker 0))) 
+    ((nl    (z) (char= z #\Newline))
+     (where (x) (position-if #'nl str :start x))
+     (worker (pos0)
+        (if (setf pos (where pos0))
+            (cons (subseq str pos0 pos) 
+                  (worker (1+ pos)))
+            (list (subseq str pos0)))))
+    (worker 0)))
 
 (defun starts-with-p (str1 str2)
   "Determine whether `str1` starts with `str2`"
