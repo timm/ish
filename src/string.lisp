@@ -14,12 +14,12 @@
   (princ c)
   (finish-output))
 
-(defun string-lines (str &aux pos)
+(defun string-lines (str)
   "Convert a string to a list of lines."
   (labels 
-    ((nl    (z) (char= z #\Newline))
-     (where (x) (position-if #'nl str :start x))
-     (worker (pos0)
+    ((nl    (z)    (char= z #\Newline))
+     (where (pos0) (position-if #'nl str :start pos0))
+     (worker (pos0 &aux pos)
         (if (setf pos (where pos0))
             (cons (subseq str pos0 pos) 
                   (worker (1+ pos)))
