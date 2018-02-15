@@ -41,6 +41,7 @@ For high-level notes on this work, please see the
   prints it, indented by a little white space"
   (labels ((defp     () (member (first x) '(defun defmacro)))
            (garnishp () (eql    (first x)  'garnish))
+           (secret   () (char= #\_ (elt (symbol-name (first x)) 0)))
            (docp     () (and    (> (length x) 3)
                                 (stringp (fourth x))
                                 (not (equal "" (fourth x)))))
@@ -51,7 +52,7 @@ For high-level notes on this work, please see the
       (terpri s)
       (dump (second x))
       (terpri s))
-    (when (and (defp) (docp))
+    (when (and (defp) (docp) (not (secret)))
       (format s "~%`~(~a~) ~(~a~)`~%~%-" (second x) (or (third x) ""))
       (dump (fourth x) "   "))))
 
