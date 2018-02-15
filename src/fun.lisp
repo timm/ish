@@ -5,9 +5,9 @@
 ;;;; Functional programming tricks (e.g. memoing).  
 ;;;;
 
-;;;;
-;;;; ### General
-;;;; ")
+;;;
+;;; ### General
+;;; ")
 
 (defun noop (&rest lst) 
   "the greatest meta function of all"
@@ -15,7 +15,7 @@
 
 (garnish "
 ;;;
-;;; Memoing
+;;; ### Memoing
 ;;; ")
 
 (defun memo (fn &key (key #'first) (test #'eql) name)
