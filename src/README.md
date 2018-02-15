@@ -180,10 +180,6 @@ Tricks for handling lisp lists.
 
 
 
-`_oprim (x)`
-
--   worker tool for 'o'
-
 `o (&rest l)`
 
 -   Print a list of symbols and their bindings.

@@ -41,7 +41,7 @@ For high-level notes on this work, please see the
   prints it, indented by a little white space"
   (labels ((defp     () (member (first x) '(defun defmacro)))
            (garnishp () (eql    (first x)  'garnish))
-           (secret   () (char= #\_ (elt (symbol-name (first x)) 0)))
+           (secret   () (char= #\_ (elt (symbol-name (second x)) 0)))
            (docp     () (and    (> (length x) 3)
                                 (stringp (fourth x))
                                 (not (equal "" (fourth x)))))
