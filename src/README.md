@@ -363,3 +363,11 @@ Everything is a 'thing' with a built-in print method.
 Standard methods for all things.
 
 
+
+`public-slot-names ((it thing))`
+
+-   return all thing slots that don't start with '_'
+
+`print-object ((it thing) out)`
+
+-   print string for all public slot names

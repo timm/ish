@@ -39,7 +39,7 @@ For high-level notes on this work, please see the
 (defun fundoc (x s)
   "Takes the function documentation string and
   prints it, indented by a little white space"
-  (labels ((defp     () (member (first x) '(defun defmacro)))
+  (labels ((defp     () (member (first x) '(defun defmacro defmethod)))
            (garnishp () (eql    (first x)  'garnish))
            (secret   () (char= #\_ (elt (symbol-name (second x)) 0)))
            (docp     () (and    (> (length x) 3)
