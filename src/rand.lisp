@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## rand.lisp
+;;;; ## RAND.LISP
 ;;;;    
 ;;;; A platform independent random number generator.
 ;;;; Not as good as LISP's built in random number generator

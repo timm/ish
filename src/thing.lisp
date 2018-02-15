@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## thing.lisp
+;;;; ## THING.LISP
 ;;;;
 ;;;; My simplications to CLOS
 ;;;; Everything is a 'thing' with a built-in print method.
@@ -18,7 +18,7 @@
 
 (garnish "
 ;;; 
-;;; Defthing (simpler that defclass).
+;;; ### Defthing (simpler that defclass).
 ;;; ")
 
 (defun defslot  (slot x form)

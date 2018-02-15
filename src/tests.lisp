@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## tests.lisp
+;;;; ## TESTS.LISP
 ;;;;    
 ;;;; Runs all the unit tests.
 ;;;; Loads all tests before executing them

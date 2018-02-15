@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;; 
-;;;; ## sys,lisp
+;;;; ## SYS.LISP
 ;;;;    
 ;;;; Here I'm attempting to localize all the stuff
 ;;;; that is implementation dependent.

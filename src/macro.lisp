@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## Macro tricks
+;;;; ## MACRO.LISP
 ;;;;
 
 ;;;;
@@ -45,7 +45,7 @@
 
 (garnish "
 ;;;
-;;; ### Prining macros
+;;; ### Printing macros
 ;;; ")
 
 (defmacro _oprim (x)

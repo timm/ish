@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## string.lisp
+;;;; ## STRING.LISP
 ;;;; ")
 
 (defun nchars (&optional (n 40) (c #\Space))

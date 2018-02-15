@@ -1,9 +1,8 @@
-(defun garnish (str &key toc)
-  "Output some markdown text." )
+(defun garnish (str &key toc))
 
 (garnish "
 ;;;;
-;;;; ## ish.lisp
+;;;; ## ISH.LISP
 ;;;; 
 ;;;; Main control file for ISH.
 ;;;; ")

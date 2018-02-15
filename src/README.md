@@ -1,6 +1,7 @@
 
 [![](https://raw.githubusercontent.com/timm/ish/master/etc/img/banner.png)](https://github.com/timm/ish/blob/master/README.md)[home](http://git.io/ish)
 | [code](https://github.com/timm/ish/tree/master/src)
+| [doc](https://github.com/timm/ish/blob/master/src/README.md)
 | [discuss](https://github.com/timm/ish/issues)
 | [contribute](https://github.com/timm/ish/blob/master/CONTRIB.md)
 | [cite](https://github.com/timm/ish/blob/master/CITATION.md)
@@ -10,6 +11,8 @@
 [![](https://zenodo.org/badge/doi/10.5281/zenodo.1172230.svg)](https://github.com/timm/ish/blob/master/CITATION.md)
 
 ______
+
+# Some Useful(ish) Documentation
 
 This page is auto-generated using:
 
@@ -23,7 +26,7 @@ For high-level notes on this work, please see the
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## file.lisp
+## FILE.LISP
 
 File handling.
 
@@ -37,7 +40,7 @@ File handling.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## fun.lisp
+## FUN.LISP
 
 Functional programming tricks (e.g. memoing).
 
@@ -81,7 +84,7 @@ Functional programming tricks (e.g. memoing).
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## Hash.lisp
+## HASH.LISP
 
 Hash function utilities.
 
@@ -93,13 +96,9 @@ Hash function utilities.
 
 
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
-`garnish (str &key toc)`
-
--   Output some markdown text.
 
 
-
-## ish.lisp
+## ISH.LISP
 
 Main control file for ISH.
 
@@ -109,7 +108,7 @@ Main control file for ISH.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## lib.lisp
+## LIB.LISP
 
 Load file for all the standard lisp tricks.
 
@@ -119,7 +118,7 @@ Load file for all the standard lisp tricks.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## list.lisp
+## LIST.LISP
 
 Tricks for handling lisp lists.
 
@@ -141,7 +140,7 @@ Tricks for handling lisp lists.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## Macro tricks
+## MACRO.LISP
 
 
 
@@ -177,7 +176,7 @@ Tricks for handling lisp lists.
 
 
 
-### Prining macros
+### Printing macros
 
 
 
@@ -193,7 +192,7 @@ Tricks for handling lisp lists.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## rand.lisp
+## RAND.LISP
 
 A platform independent random number generator.
 Not as good as LISP's built in random number generator
@@ -206,7 +205,7 @@ of that generator. Hence this code.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## read,me.lisp
+## README.LISP
 
 Tools for extracting documentation from LISP code.
 Reads files, one s-expression at a time. Any `defuns`
@@ -228,7 +227,7 @@ doc strings are printed.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## string.lisp
+## STRING.LISP
 
 
 
@@ -262,7 +261,7 @@ doc strings are printed.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## sys,lisp
+## SYS.LISP
 
 Here I'm attempting to localize all the stuff
 that is implementation dependent.
@@ -289,7 +288,7 @@ that is implementation dependent.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## test.lisp
+## TEST.LISP
 
 A tiny unit test engine in LISP.
 This code lets us define and call tests in two ways.
@@ -315,7 +314,7 @@ all together by call `tests` with the optional
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## tests.lisp
+## TESTS.LISP
 
 Runs all the unit tests.
 Loads all tests before executing them
@@ -328,7 +327,7 @@ are summed over all unit test files.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## thing.lisp
+## THING.LISP
 
 My simplications to CLOS
 Everything is a 'thing' with a built-in print method.
@@ -343,7 +342,7 @@ Everything is a 'thing' with a built-in print method.
 
 
 
-Defthing (simpler that defclass).
+### Defthing (simpler that defclass).
 
 
 

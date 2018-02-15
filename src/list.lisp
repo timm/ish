@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## list.lisp
+;;;; ## LIST.LISP
 ;;;;         
 ;;;; Tricks for handling lisp lists.
 ;;;; ")

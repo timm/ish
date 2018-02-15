@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## read,me.lisp
+;;;; ## README.LISP
 ;;;;
 ;;;; Tools for extracting documentation from LISP code.
 ;;;; Reads files, one s-expression at a time. Any `defuns`
