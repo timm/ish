@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## FUN.LISP
+;;;; ## [FUN.LISP](fun.lisp)
 ;;;;
 ;;;; Functional programming tricks (e.g. memoing).  
 ;;;;

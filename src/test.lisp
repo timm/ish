@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;; 
-;;;; ## TEST.LISP
+;;;; ## [TEST.LISP](test.lisp)
 ;;;; 
 ;;;; A tiny unit test engine in LISP.
 ;;;; This code lets us define and call tests in two ways.

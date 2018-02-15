@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## THING.LISP
+;;;; ## [THING.LISP](thing.lisp)
 ;;;;
 ;;;; My simplications to CLOS
 ;;;; Everything is a 'thing' with a built-in print method.

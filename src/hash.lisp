@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'lib)) (garnish "
 ;;;;
-;;;; ## HASH.LISP
+;;;; ## [HASH.LISP](hash.lisp)
 ;;;;
 ;;;; Hash function utilities.
 ;;;; ")

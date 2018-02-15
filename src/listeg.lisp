@@ -4,6 +4,17 @@
   "test"
   "list")
 
+(deftest _items() 
+  (let ((lst '(a b c d e f)))
+    (test 'a (_1 lst))
+    (test 'b (_2 lst))
+    (test 'c (_3 lst))
+    (test 'd (_4 lst))
+    (test 'e (_5 lst))
+    (test 'a (head lst))
+    (test 'f (tail lst))
+))
+
 (deftest _select ()
   "seeking association list"
   (test '(1 3 5 7)

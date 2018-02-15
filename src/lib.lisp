@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## LIB.LISP
+;;;; ## [LIB.LISP](lib.lisp)
 ;;;;         
 ;;;; Load file for all the standard lisp tricks.
 ;;;; ")

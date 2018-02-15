@@ -16,7 +16,7 @@ ______
 
 This page is auto-generated using:
 
-      clisp readme.lisp > README.md
+      clisp readme > README.md
 
 For high-level notes on this work, please see the
 [master readme](https://github.com/timm/ish/blob/master/README.md).
@@ -26,7 +26,7 @@ For high-level notes on this work, please see the
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## FILE.LISP
+## [FILE.LISP](file.lisp)
 
 File handling.
 
@@ -40,7 +40,7 @@ File handling.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## FUN.LISP
+## [FUN.LISP](fun.lisp)
 
 Functional programming tricks (e.g. memoing).
 
@@ -84,7 +84,7 @@ Functional programming tricks (e.g. memoing).
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## HASH.LISP
+## [HASH.LISP](hash.lisp)
 
 Hash function utilities.
 
@@ -98,7 +98,7 @@ Hash function utilities.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## ISH.LISP
+## [ISH.LISP](ish.lisp)
 
 Main control file for ISH.
 
@@ -108,7 +108,7 @@ Main control file for ISH.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## LIB.LISP
+## [LIB.LISP](lib.lisp)
 
 Load file for all the standard lisp tricks.
 
@@ -118,11 +118,19 @@ Load file for all the standard lisp tricks.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## LIST.LISP
+## [LIST.LISP](list.lisp)
 
 Tricks for handling lisp lists.
 
 
+
+`head (lst)`
+
+-   Return first item
+
+`tail (lst)`
+
+-   Return last item
 
 `l->a (lst)`
 
@@ -140,7 +148,7 @@ Tricks for handling lisp lists.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## MACRO.LISP
+## [MACRO.LISP](macro.lisp)
 
 
 
@@ -188,7 +196,7 @@ Tricks for handling lisp lists.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## RAND.LISP
+## [RAND.LISP](rand.lisp)
 
 A platform independent random number generator.
 Not as good as LISP's built in random number generator
@@ -201,7 +209,7 @@ of that generator. Hence this code.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## README.LISP
+## [README.LISP](readme.lisp)
 
 Tools for extracting documentation from LISP code.
 Reads files, one s-expression at a time. Any `defuns`
@@ -223,7 +231,7 @@ doc strings are printed.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## STRING.LISP
+## [STRING.LISP](string.lisp)
 
 
 
@@ -235,9 +243,9 @@ doc strings are printed.
 
 -   prints one chacracter, no new line, forced to output
 
-`string-lines (str)`
+`string-lines (str &aux pos)`
 
--   divide a string into lines
+-   Convert a string to a list of lines.
 
 `starts-with-p (str1 str2)`
 
@@ -257,7 +265,7 @@ doc strings are printed.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## SYS.LISP
+## [SYS.LISP](sys.lisp)
 
 Here I'm attempting to localize all the stuff
 that is implementation dependent.
@@ -284,7 +292,7 @@ that is implementation dependent.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## TEST.LISP
+## [TEST.LISP](test.lisp)
 
 A tiny unit test engine in LISP.
 This code lets us define and call tests in two ways.
@@ -310,7 +318,7 @@ all together by call `tests` with the optional
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## TESTS.LISP
+## [TESTS.LISP](tests.lisp)
 
 Runs all the unit tests.
 Loads all tests before executing them
@@ -323,7 +331,7 @@ are summed over all unit test files.
 <img src='https://goo.gl/m8uxAf' height=15 width=900>
 
 
-## THING.LISP
+## [THING.LISP](thing.lisp)
 
 My simplications to CLOS
 Everything is a 'thing' with a built-in print method.

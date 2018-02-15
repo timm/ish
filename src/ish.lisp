@@ -2,7 +2,7 @@
 
 (garnish "
 ;;;;
-;;;; ## ISH.LISP
+;;;; ## [ISH.LISP](ish.lisp)
 ;;;; 
 ;;;; Main control file for ISH.
 ;;;; ")

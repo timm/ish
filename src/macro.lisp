@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load 'ish)) (garnish "
 ;;;;
-;;;; ## MACRO.LISP
+;;;; ## [MACRO.LISP](macro.lisp)
 ;;;;
 
 ;;;;
