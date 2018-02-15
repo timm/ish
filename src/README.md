@@ -243,7 +243,7 @@ doc strings are printed.
 
 -   prints one chacracter, no new line, forced to output
 
-`string-lines (str &aux pos)`
+`string-lines (str)`
 
 -   Convert a string to a list of lines.
 
