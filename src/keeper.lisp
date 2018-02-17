@@ -1,6 +1,6 @@
 (unless (fboundp 'establish) (load "ish")) (garnish "
 ;;;;
-;;;; ## [keeper.LISP](keeper.lisp)
+;;;; ## [KEEPER.LISP](keeper.lisp)
 ;;;;
 ;;;; `keeper` is a thing with a unique `id
 ;;;; that holds a cache `_cache` of kept stuff
@@ -11,6 +11,7 @@
 (defthing keeper thing (id (gensym "kept")) (_cache))
 
 (defmacro kept (it &body body)
+  "using the hash table _cache, compute this once, then keep it"
   (let ((val     (gensym))
         (found-p (gensym))
         (key     (gensym)))

@@ -154,6 +154,21 @@ Main control file for ISH.
 <img src='https://goo.gl/m8uxAf' height=10 width=900>
 
 
+## [KEEPER.LISP](keeper.lisp)
+
+`keeper` is a thing with a unique `id
+that holds a cache `_cache` of kept stuff
+
+
+
+`kept (it &body body)`
+
+-   using the hash table _cache, compute this once, then keep it
+
+
+<img src='https://goo.gl/m8uxAf' height=10 width=900>
+
+
 ## [LIB.LISP](lib.lisp)
 
 Load file for all the standard lisp tricks.
@@ -417,3 +432,21 @@ Standard methods for all things.
 `print-object ((it thing) out)`
 
 -   print string for all public slot names
+
+
+<img src='https://goo.gl/m8uxAf' height=10 width=900>
+
+
+## [TIME.LISP](TIME.lisp)
+
+Functions for handking time.
+
+
+
+`current-date-string `
+
+-   Returns current date as a string.
+
+`current-year `
+
+-   Returns current year.
