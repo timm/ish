@@ -8,38 +8,17 @@
 (establish 
   "thing")
 
-(defthing keeper thing (id 0) (_cache))
+(defthing keeper thing (id (gensym "kept")) (_cache))
 
-(let ((n 0))
-  (defmethod initialize-instance :after ((i stuff) &rest _) 
-    (with-slots (id) i
-     (setf id (incf n)))))
-
-(defmethodu  ((k keepr) key )
-  #'(lambda (&rest args)
-      (with-slots (_cache) k
-    (unless _cache
-      setf _cache (make-hash-table)))
-    (multiple-value-bind (val found-p)
-      (gethash key _cache)
-      (if found-p val
-        (setf (gethash key _cache)
-              (apply fn args)))))
-
-(defun keeping (x fn-name)
-  (setf (symbol-function fn-name)
-        (
-(defmacro defkeeer (fn args &body body)
-  (let ((fun  (caar args)))
-  `(keeping ',fun (defmethod ,fn ,args . ,body))))
-
-(print  (make-instance 'stuff :id 20))
-(print  (make-instance 'stuff :id 20))
-(print  (make-instance 'stuff :id 20))
-(print  (make-instance 'stuff :id 20))
-
-(defmethod aaa ((xx b) a b c) 
-  (_kept xx 'aaa 
-         #'(lambda (x y z)
-             body)
-         `(,a ,b ,c)))
+(defmacro kept (it &body body)
+  (let ((val     (gensym))
+        (found-p (gensym))
+        (key     (gensym)))
+    `(with-slots (_cache) ,it
+       (setf _cache (or _cache
+                        (make-hash-table)))
+       (multiple-value-bind (,val ,found-p)
+         (gethash ',key _cache)
+         (if ,found-p ,val
+           (setf (gethash ',key _cache)
+                 (progn ,@body)))))))

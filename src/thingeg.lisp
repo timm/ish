@@ -10,7 +10,9 @@
 (deftest _thing()
   "things"
   (let ((it (make-instance 'our :b 23)))
-    (print it)
+    (setf (? it d) 200)
+    (decf (? it d))
+    (test 199 (? it d))
     (test 30 (? it _hush))))
 
 (tests)
