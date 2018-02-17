@@ -10,12 +10,11 @@
 
 (defmethod age ((e emp))
   (kept e
-    (format t "[making age]~%")
     (incf (? e calls) )
     (- (current-year) (? e dob))))
 
 (deftest _keep ()
-  "_keeping"
+  "_keeping. age is called many times but computed only once."
   (let ((e (make-instance 'emp)))
     (age e)
     (age e)
@@ -27,7 +26,7 @@
     (age e)
     (age e)
     (print (age e))
-    (test 1 (slot-value e 'calls))
+    (test 1 (? e calls))
     ))
 
 (tests)

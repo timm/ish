@@ -4,7 +4,7 @@
 ;;;;
 ;;;; `keeper` is a thing with a unique `id`
 ;;;; that holds a cache `_cache` of kept stuff.
-;;;; For an example of usage, see `thingeg.lisp`
+;;;; For an example of usage, see [keepereg.lisp](keepereg.lisp).
 ;;;;
 ;;;; ")
 (establish 
