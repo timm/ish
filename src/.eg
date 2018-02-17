@@ -1,0 +1,12 @@
+(unless (fboundp 'establish) (load 'ish))
+
+(establish
+  "test"
+  "XXX")
+
+(deftest _yyy() 
+   (test 1 1)
+)
+
+(tests)
+

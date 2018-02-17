@@ -1,0 +1,10 @@
+(unless (fboundp 'establish) (load 'ish)) (garnish "
+;;;;
+;;;; ## [XXX.LISP](XXX.lisp)
+;;;;
+;;;; Everything needs some doc
+;;;; ")
+(establish 
+  "yyy")
+
+
