@@ -156,8 +156,10 @@ Main control file for ISH.
 
 ## [KEEPER.LISP](keeper.lisp)
 
-`keeper` is a thing with a unique `id
-that holds a cache `_cache` of kept stuff
+`keeper` is a thing with a unique `id`
+that holds a cache `_cache` of kept stuff.
+For an example of usage, see `thingeg.lisp`
+
 
 
 
