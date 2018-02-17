@@ -26,6 +26,48 @@ For high-level notes on this work, please see the
 <img src='https://goo.gl/m8uxAf' height=10 width=900>
 
 
+## [ASD.LISP](asd.lisp)
+
+Generates an asf file from the public methods
+and in this directory.
+
+Example usage:
+
+````
+clisp asd > fft.asd
+````
+
+
+
+`asd (&optional (what ish))`
+
+-   Generates an asd file
+
+
+<img src='https://goo.gl/m8uxAf' height=10 width=900>
+
+
+## [DEFSYSTEM.LISP](defsystem.lisp)
+
+Generates a defsystem file from the public methods
+and in this directory.
+
+Example usage:
+
+````
+clisp defsystem > package.lisp
+````
+
+
+
+`print-defsystem (&optional (what ish))`
+
+-   Generates a defsystem file
+
+
+<img src='https://goo.gl/m8uxAf' height=10 width=900>
+
+
 ## [FILE.LISP](file.lisp)
 
 File handling.
@@ -35,6 +77,10 @@ File handling.
 `reads (f &optional (fn #'print) (str t))`
 
 -   Read  a file, calling 'fn' on each s-expression.
+
+`public-files-methods `
+
+-   Returns two values: the public functions and files.
 
 
 <img src='https://goo.gl/m8uxAf' height=10 width=900>
