@@ -1,4 +1,4 @@
-(unless (fboundp 'ish) (load 'ish))
+(unless (fboundp 'establish) (load "ish"))
 (establish 
   "test"
   "thing")

@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load 'ish)) 
+(unless (fboundp 'establish) (load "ish")) 
 (establish
   "test"
   "macro")

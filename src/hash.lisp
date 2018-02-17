@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load 'lib)) (garnish "
+(unless (fboundp 'establish) (load "ish")) (garnish "
 ;;;;
 ;;;; ## [HASH.LISP](hash.lisp)
 ;;;;

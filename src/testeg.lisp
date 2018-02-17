@@ -2,7 +2,7 @@
 ;;;; Includes one example of a failed test
 ;;;; so we can test our tests recognize bad tests.
 
-(unless (fboundp 'ish) (load 'ish)) 
+(unless (fboundp 'establish) (load "ish")) 
 (establish
   "test")
 

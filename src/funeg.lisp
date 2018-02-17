@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load 'ish)) (garnish "
+(unless (fboundp 'establish) (load "ish")) (garnish "
 ;;;;
 ;;;; Examples of use for fun.lisp
 ;;;; ")
