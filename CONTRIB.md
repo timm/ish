@@ -23,9 +23,8 @@ ______
 3. Send pull request.
 4. Easy!
 
-## Coding Standards
 
-### Write code  for multiple LISP implemenetations:
+## Write code  for multiple LISP implemenetations:
 
 I use `clisp` and `sbcl`. The former is simpler to use (no hyper-verbose error strings)
 while the latter is good for raw speed (so I code in one and deploy in the other). 
@@ -39,7 +38,7 @@ check that the code works for both versions of lisp, run the test suite:
       clisp tests
       sbcl --script tests.lisp
 
-### Typing Standards
+## Typing Standards
 
 - Indent using 2 characters (no tabs);
 - Max width less than 80 characters;
@@ -58,7 +57,7 @@ as part of a pull request):
     clisp asd       > ish.asd    # builds a system definition file
     clisp defsystem > package.lisp # builds the defsystem file.
 
-### Each file should be executed.
+## Each file should be executed.
 
 Each `X.lisp` file should be executable via (e.g. `clisp X`).
 This means that each file must know its own dependances, which is achieved
@@ -72,7 +71,7 @@ using  the `establish` command (found in the `ish` file):
 	       "to" 
 	       "load")
 
-### Each file should be testable
+## Each file should be testable
 
 Write one `Xeg.lisp` unit test files  for the  `X.lisp` files.
 The first few lines of that file are:
@@ -104,7 +103,7 @@ To run all tests (in alphabetical order of the test files), use
     sbcl --script tests.lisp
     clisp tests
 
-### Each file should be documented.
+## Each file should be documented.
 
 You can `garnish` your code with Markdown snippets.
 
