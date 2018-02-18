@@ -62,7 +62,7 @@ as part of a pull request):
     sbcl --scipt asd .lisp
     sbcl --scipt defsystem .lisp
 
-## Each file should be executed.
+## Each file should be executable
 
 Each `X.lisp` file should be executable via (e.g. `clisp X`).
 This means that each file must know its own dependances, which is achieved
