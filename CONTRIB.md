@@ -36,6 +36,7 @@ To
 check that the code works for both versions of lisp, run the test suite:
 
       clisp tests
+      # or...
       sbcl --script tests.lisp
 
 ## Typing Standards
@@ -56,6 +57,10 @@ as part of a pull request):
     clisp readme    > README.md  # collects documentation; see below
     clisp asd       > ish.asd    # builds a system definition file
     clisp defsystem > package.lisp # builds the defsystem file.
+    ; or....
+    sbcl --scipt readme.lisp
+    sbcl --scipt asd .lisp
+    sbcl --scipt defsystem .lisp
 
 ## Each file should be executed.
 
@@ -83,10 +88,12 @@ The first few lines of that file are:
         "X" ; the code you want to test
       )
 
-In that file, write a function with the tests;
-Add `(test want got)` calls inside the function to check
+In that file
+
+- Write a function with the tests;
+- Add `(test want got)` calls inside the function to check
 that the right tigns are being returned;
-Change the function's `defun` to `deftest`
+- Change the function's `defun` to `deftest`
 
 Nest, at the last line of the `Xeg.lisp`, add this line:
 
@@ -95,12 +102,13 @@ Nest, at the last line of the `Xeg.lisp`, add this line:
 To run the tests for one file use
 
     sbcl --script Xeg.file
+    # or...
     clisp Xeg
     
 To run all tests (in alphabetical order of the test files), use
 
-
     sbcl --script tests.lisp
+    # or...
     clisp tests
 
 ## Each file should be documented.
@@ -120,6 +128,8 @@ Also, you can add comments in function docstrings:
 All this documentation can be collected using, say:
 
       clisp readme > README.md
+      # or...
+      sbcl --script readme.lisp > README.md
 
 All the `garnish`es will be written as output
 but only the docstrings from _public_ methods, functions, and macros will be collected.
