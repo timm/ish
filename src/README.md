@@ -47,6 +47,77 @@ clisp asd > fft.asd
 <img src='https://goo.gl/m8uxAf' height=10 width=900>
 
 
+## [COL.LISP](col.lisp)
+
+Maintain information about a column of
+numbers or symbols
+
+
+
+
+
+Different column types are denoted by
+different symbols.
+
+
+
+
+
+Columns are places where you add items
+
+Columns have a `name`, and fall into some
+`pos` inside a `table`.
+
+
+
+`add ((c col) x)`
+
+-   Add numbers to column.
+
+
+
+Some columns hold `num`bers.
+
+
+
+`valid ((n num) x)`
+
+-   Numbers have to be numbers.
+
+`add1 ((nu num) x)`
+
+-   New numbers update `min` and `max`.
+
+`norm ((n num) x)`
+
+-   Convert x to the range 0..1.
+
+
+
+Some columns hold `sym`bols.
+
+`Counts` how many symbols are in this
+column; `mode` is the most common symbol.
+
+
+
+`valid ((s sym) x)`
+
+-   Anything is valid in a `sym` column.
+
+`add1 ((s sym) x)`
+
+-   Increment the symbols counts,
+   update `mode` when necessary.
+
+`norm ((s sym) x)`
+
+-   Normalize symbols does nothing.
+
+
+<img src='https://goo.gl/m8uxAf' height=10 width=900>
+
+
 ## [DEFSYSTEM.LISP](defsystem.lisp)
 
 Generates a defsystem file from the public methods
@@ -158,12 +229,12 @@ Main control file for ISH.
 
 `keeper` is a thing with a unique `id`
 that holds a cache `_cache` of kept stuff.
-For an example of usage, see `thingeg.lisp`
+For an example of usage, see [keepereg.lisp](keepereg.lisp).
 
 
 
 
-`kept (it &body body)`
+`keep (it &body body)`
 
 -   using the hash table _cache, compute this once, then keep it
 

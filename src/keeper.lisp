@@ -12,7 +12,7 @@
 
 (defthing keeper thing (id (gensym "kept")) (_cache))
 
-(defmacro kept (it &body body)
+(defmacro keep (it &body body)
   "using the hash table _cache, compute this once, then keep it"
   (let ((val     (gensym))
         (found-p (gensym))

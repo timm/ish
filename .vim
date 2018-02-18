@@ -49,5 +49,5 @@ set lispwords+=doitems
 set lispwords+=doh
 set lispwords+=defone
 set lispwords+=defmemo
-set lispwords+=kept
+set lispwords+=keep
 

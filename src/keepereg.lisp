@@ -9,7 +9,7 @@
 (defthing emp keeper (dob 1960) (calls 0))
 
 (defmethod age ((e emp))
-  (kept e
+  (keep e
     (incf (? e calls) )
     (- (current-year) (? e dob))))
 
