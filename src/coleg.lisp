@@ -4,16 +4,16 @@
   "test"
   "col")
 
-(deftest _num() 
+(deftest _num () 
   "Compute number."
-  (let ((n (make-instance 'num)))
-    (adds n '(9 2 5 4 12 7 8 11 9 3
-              7 4 12 5 4 10 9 6 9 4))
-    (test 3.0607877 (? n sd))
-    (test 7         (? n mu))))
+  (let ((nu (nums '(9 2 5 4 12 7 8 11 9 3
+                   7 4 12 5 4 10 9 6 9 4))))
+    (test 3.0607877 (? nu sd))
+    (test 7         (? nu mu))))
 
-(let ((n (make-instance 'num)))
-  (dotimes (i 1000000)
-    (add n i)))
+(deftest _sym ()
+  "Computer symbols"
+  (let ((s (syms '(a b b c c c c))))
+    (test 1.3787835 (ent s))))
 
 (tests)

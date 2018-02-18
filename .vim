@@ -41,6 +41,8 @@ set clipboard=unnamed
 set spell spelllang=en_us
 set nospell
 set tabstop=2 shiftwidth=2 expandtab
+set lispwords+=doitems
+set lispwords+=doh
 set lispwords+=deftest
 set lispwords+=defthing
 set lispwords+=until

@@ -6,6 +6,7 @@
 ;;;; numbers or symbols
 ;;;; ")
 (establish
+  "macro"
   "keeper")
 
 (defun prefix (x y) (eql (char (symbol-name x) 0) y))
@@ -39,8 +40,11 @@
   x)
 
 (defmethod adds ((c col) lst)
-  (dolist (x lst) 
+  (dolist (x lst c) 
     (add c x)))
+
+(defun nums (lst) (adds (make-instance 'num) lst))
+(defun syms (lst) (adds (make-instance 'sym) lst))
 
 (garnish "
 ;;;
@@ -97,12 +101,11 @@
   "Increment the symbols counts,
   update `mode` when necessary."
   (with-slots (most mode counts  n) s
-    (incf n)
     (let* 
-        ((new (incf (gethash x counts 0))))
-        (if (> new most)
-          (setf most new
-                mode x)))))
+      ((new (incf (gethash x counts 0))))
+      (if (> new most)
+        (setf most new
+              mode x)))))
 
 (defmethod norm ((s sym) x) 
   "Normalize symbols does nothing."
@@ -111,3 +114,11 @@
 (defmethod keys ((s sym))
   (keep s
     (hash-keys (? s counts))))
+
+(defmethod ent ((s sym))
+  (with-slots (counts n) s
+    (let ((e 0))
+      (doh (k v counts e)
+        (let ((p (/ v n)))
+          (decf e (* p (log p 2))))))))
+
