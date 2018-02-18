@@ -23,11 +23,6 @@ ______
 3. Send pull request.
 4. Easy!
 
-Note that code comes with tools for automatically deriving
-files from other files 
-     (see below: readme.lisp, asd.lisp, defsystem.lisp).  
-If you execute those, do not add the output to the pull request.
-
 ## Coding Standards
 
 ### Write code  for multiple LISP implemenetations:
@@ -50,6 +45,18 @@ check that the code works for both versions of lisp, run the test suite:
 - Max width less than 80 characters;
 - No camel case function, macro, method or class names. E.g. do `init-sys` rather than `initSys`;
 - No `&aux` on outer level functions, methods (but they are fine for `labels` functions).
+
+## Annotate code to make it  _public_ and _private_  
+
+Private functions, methods, and macros have no docstring or start with "\_";
+
+All other code is public. All public code can be exposed to the outside world via the following
+tools. That said **do not run these tools** (or, if you do, do not add their output
+as part of a pull request):
+
+    clisp readme    > README.md  # collects documentation; see below
+    clisp asd       > ish.asd    # builds a system definition file
+    clisp defsystem > package.lisp # builds the defsystem file.
 
 ### Each file should be executed.
 
@@ -82,7 +89,7 @@ Add `(test want got)` calls inside the function to check
 that the right tigns are being returned;
 Change the function's `defun` to `deftest`
 
-Nest, at the last line of the `Xok.lisp`, add this line:
+Nest, at the last line of the `Xeg.lisp`, add this line:
 
     (tests)
 
@@ -117,16 +124,3 @@ All this documentation can be collected using, say:
 
 All the `garnish`es will be written as output
 but only the docstrings from _public_ methods, functions, and macros will be collected.
-
-
-###  _Public_ and _private_  code
-
-Private functions, methods, and macros have no docstring or start with "\_";
-
-All other code is public. All public code can be exposed to the outside world using
-
-    clisp readme    > README.md  # collects documentation strings
-    clisp asd       > ish.asd    # builds a system definition file
-    clisp defsystem > package.lisp # builds the defsystem file.
-
-
