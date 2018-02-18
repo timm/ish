@@ -32,11 +32,11 @@
 
 (defmethod add ((c col) x)
   "Add numbers to column."
-	(unless (eql c #\?) ; skip ignores
-		(incf (? c n)) ; inc the total counts
-		(valid c x) ; check the item is valid
-		(add1 c x)) ; add it in
-	x)
+  (unless (eql c #\?) ; skip ignores
+    (incf (? c n)) ; inc the total counts
+    (valid c x) ; check the item is valid
+    (add1 c x)) ; add it in
+  x)
 
 (defmethod adds ((c col) lst)
   (dolist (x lst) 
@@ -49,13 +49,13 @@
 
 (defthing num col
   (mu 0) (m2 0) (sd 0)
-	(lo most-positive-fixnum)
-	(hi most-negative-fixnum)
-	(all))
+  (lo most-positive-fixnum)
+  (hi most-negative-fixnum)
+  (all))
 
 (defmethod valid ((n num) x)
   "Numbers have to be numbers."
-	(assert (numberp x) (x) "Not a number ~a" x))  
+  (assert (numberp x) (x) "Not a number ~a" x))  
 
 (defmethod add1 ((nu num) x) 
   "New numbers update `min` and `max`."
@@ -72,10 +72,10 @@
 
 (defmethod norm ((n num) x)  
   "Convert x to the range 0..1."
-	(with-slots (lo hi) n
-		(/ (- x lo)
-			 (+ (- hi lo)
-					(/ 1 most-positive-fixnum)))))
+  (with-slots (lo hi) n
+    (/ (- x lo)
+       (+ (- hi lo)
+          (/ 1 most-positive-fixnum)))))
 
 (garnish "
 ;;;
@@ -86,19 +86,19 @@
 ;;; ")
 
 (defthing sym col
-	(most 0) (mode) 
-	(counts (make-hash-table)))
+  (most 0) (mode) 
+  (counts (make-hash-table)))
 
 (defmethod valid ((s sym) x)
   "Anything is valid in a `sym` column."
-	(declare (ignore s x)))
+  (declare (ignore s x)))
 
 (defmethod add1 ((s sym) x)
   "Increment the symbols counts,
   update `mode` when necessary."
-	(with-slots (most mode counts  n) s
-		(incf n)
-		(let* 
+  (with-slots (most mode counts  n) s
+    (incf n)
+    (let* 
         ((new (incf (gethash x counts 0))))
         (if (> new most)
           (setf most new
@@ -109,5 +109,5 @@
   x)
 
 (defmethod keys ((s sym))
-	(keep s
+  (keep s
     (hash-keys (? s counts))))
