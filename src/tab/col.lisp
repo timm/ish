@@ -9,17 +9,6 @@
   "macro"
   "keeper")
 
-(defun prefix (x y) (eql (char (symbol-name x) 0) y))
-
-(defun skip     (x) (prefix x #\?))
-(defun more     (x) (prefix x #\>))
-(defun less     (x) (prefix x #\<))
-(defun klass    (x) (prefix x #\!))
-(defun num      (x) (prefix x #\$))
-(defun goal     (x) (or (klass x) (less x) (more x)))
-(defun numeric  (x) (or (num x)   (less x) (more x)))
-(defun sym      (x) (and (not (num x)) (not (goal x))))
-
 (garnish "
 ;;;
 ;;; Columns are places where you add items
@@ -31,7 +20,7 @@
 (defthing col keeper  
   (n 0) (name) (pos) (table))
 
-(defmethod add ((c col) x)
+(defmethod add ((c col) x )
   "Add numbers to column."
   (unless (eql c #\?) ; skip ignores
     (incf (? c n)) ; inc the total counts
@@ -39,12 +28,15 @@
     (add1 c x)) ; add it in
   x)
 
-(defmethod adds ((c col) lst)
+(defmethod adds ((c col) lst &key (filter #'identity))
   (dolist (x lst c) 
-    (add c x)))
+    (add c x :filter filter)))
 
-(defun nums (lst) (adds (make-instance 'num) lst))
-(defun syms (lst) (adds (make-instance 'sym) lst))
+(defun nums (lst &key (filter #'identity)) 
+  (adds (make-instance 'num) lst :filter filter))
+
+(defun syms (lst &key (filter #'identity)) 
+  (adds (make-instance 'sym) lst :filter filter))
 
 (garnish "
 ;;;

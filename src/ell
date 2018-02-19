@@ -1,0 +1,15 @@
+Here=$PWD
+
+ed() {
+  vim -u $Here/../.vim $@
+}
+
+hi() {
+  git pull
+}
+
+bye() {
+  git status
+  git commit -am "update" 
+  git push
+}

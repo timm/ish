@@ -12,8 +12,6 @@
 ;;;; ````
 ;;;; ")
 
-(load "file")
-(load "string")
 
 (defun asd (&optional (what "ish"))
   "Generates an asd file"

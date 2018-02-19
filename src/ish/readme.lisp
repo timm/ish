@@ -8,8 +8,6 @@
 ;;;; doc strings are printed.
 ;;;; ")
 
-(load "file")
-(load "string")
 
 (setf +header+ "
 [![](https://raw.githubusercontent.com/timm/ish/master/etc/img/banner.png)](https://github.com/timm/ish/blob/master/README.md)[home](http://git.io/ish)

@@ -12,8 +12,6 @@
 ;;;; ````
 ;;;; ")
 
-(load "file")
-(load "string")
 
 (defun print-defsystem (&optional (what "ish"))
   "Generates a defsystem file"
