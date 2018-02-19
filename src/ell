@@ -13,3 +13,5 @@ bye() {
   git commit -am "update" 
   git push
 }
+
+PS1="ELL::$PS1"

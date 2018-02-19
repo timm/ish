@@ -14,6 +14,7 @@
 (deftest _sym ()
   "Computer symbols"
   (let ((s (syms '(a b b c c c c))))
-    (test 1.3787835 (ent s))))
+    (let ((diff (abs (- 1.3787836 (ent s)))))
+      (test t (< diff 0.0001)))))
 
 (tests)

@@ -20,12 +20,13 @@
 (defthing col keeper  
   (n 0) (name) (pos) (table))
 
-(defmethod add ((c col) x )
+(defmethod add ((c col) x &key (filter #'indentity))
   "Add numbers to column."
   (unless (eql c #\?) ; skip ignores
-    (incf (? c n)) ; inc the total counts
-    (valid c x) ; check the item is valid
-    (add1 c x)) ; add it in
+    (let ((y (funcall filter x)))
+      (incf (? c n)) ; inc the total counts
+      (valid c y) ; check the item is valid
+      (add1 c y))) ; add it in
   x)
 
 (defmethod adds ((c col) lst &key (filter #'identity))
