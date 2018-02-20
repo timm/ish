@@ -1,17 +1,37 @@
 Here=$PWD
+if [ -z "$me" ]; then
+  PS1="ELL::$PS1"
+  me=ell
+fi
 
-ed() {
+ed() { # ed FILE   : Edit a file with my vim bindings.
   vim -u $Here/../.vim $@
 }
 
-hi() {
+hi() { # hi        : Update files from git.
   git pull
 }
 
-bye() {
+bye() { # bye       : Push files back to git.
   git status
   git commit -am "update" 
   git push
 }
 
-PS1="ELL::$PS1"
+eg() { # eg FILE   : Run the unit tests for FILE.
+  for i in */${1}eg.lisp; do
+     clisp $i
+     return 0
+  done
+}
+
+help() {  cat <<-EOF
+  
+	ell [OPTIONS]
+  
+	OPTIONS:
+  
+	EOF
+  grep '()' $me | grep -v help | grep -v grep | 
+  sed 's/^.*# //' 
+}
