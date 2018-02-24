@@ -43,18 +43,18 @@
            (is (aref b x y) (will-live b x y)))))))        
 
 (defmethod ok ((b board) pair)
-  (and (<= 0 (first pair) (board-xmax b))
-       (<= 0 (second pair) (board-ymax b))))
 
-(defun around (pos dxs dys b &aux out)
-  (with-slots (x y) pos
-    (dolist (dx dxs out)
-      (dolist (dy dys)
+(defun around (x y dxs dys b xmax ymax)
+  (let ((ds '(-1 0 1))
+        out)
+    (dolist (dx ds out)
+      (dolist (dy ds)
         (let* ((x1   (+ x dx))
                (y1   (+ y dy))
                (new `(,x1 ,y1)))
-          (if (and (ok  b new)
-                   (or (not (= x x1)) (not (= y y1))))
+          (if (and  (<= 0 x1 xmax)
+                    (<= 0 y2 ymax)
+                    (or (not (= x x1)) (not (= y y1))))
             (push `(,x1 ,y1) out)))))))
 
 (defmethod alives ((b board) pos)
