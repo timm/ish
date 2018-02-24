@@ -5,7 +5,9 @@ if [ -z "$me" ]; then
 fi
 
 ed() { # ed FILE   : Edit a file with my vim bindings.
-  vim -u $Here/../.vim $@
+  local f=$1
+  if [ ! -f "$f" ]; then f=$f.lisp; fi
+  vim -u $Here/../.vim $f
 }
 
 hi() { # hi        : Update files from git.

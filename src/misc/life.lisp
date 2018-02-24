@@ -11,6 +11,37 @@
 ;;live-list is a list of coordinates for live cells. For example: '((0 1) (1 1) (2 1))
 ;;size-sq is the size of the square grid. For example, 3 to draw a 3x3 grid.
 ;;num-gen is the number of generations to simulate.
+
+(defmacro ? (obj first-slot &rest more-slots)
+  (if (null more-slots)
+      `(slot-value ,obj ',first-slot)
+      `(? (slot-value ,obj ',first-slot) ,@more-slots)))
+
+(defmacro is (&rest lst)
+  (setf lst (reverse lst))
+  `(setf (? ,@(reverse (cdr lst))) ,(car lst)))
+   
+(defstruct xy x y)
+(defstruct cell xy alive)
+
+(print 20)
+
+(defun board (xmax ymax &rest inits)
+  (let ((b (make-array `(,xmax ,ymax) :initial-element 0)))
+    (dolist (x xmax)
+      (dolist (y ymax)
+        (setf (aref b x y) 
+              (make-cell :xy (make-xy :x x :y)))))
+    (dolist (init inits b)
+      (print init)
+      (setf (cell-alive  (aref b (first init) (second init)))
+           t))))
+
+(print (board 10 20))
+
+(print '======================)
+
+  
 (defun game-start (live-list size-sq num-gen)
   (setf grid (get-grid-values size-sq))
   (game-recurse live-list grid size-sq num-gen))
