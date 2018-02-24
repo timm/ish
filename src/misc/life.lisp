@@ -29,8 +29,34 @@
       (draw next-gen grid size-sq)
       ;(sleep 0.25)
       (game-recurse next-gen grid size-sq (- num-gen 1)))))
+;;Get the list of neighbors for a cell with coordinates (x,y). 
 
-(defstuct cell  i j (alive))
+
+(defstruct pos x y)
+(defstruct cell  i j (alive))
+(defstruct board cells xmax ymax)
+
+(defmethod at     ((b board) pos) (aref (board-cells b) (pos-x  pos) (pos-y pos)))
+(defmethod alive  ((b board) pos) (cell-alive (at b pos)))
+(defmethod alives ((b board) pos)
+  (count-if #'(lambda (pos) (alive b pos))
+            (around pos '(-1 0 1) '(-1 0 1) b)))
+
+(defmethod ok ((b board) pair)
+  (and (<= 0 (first pair) (board-xmax b))
+       (<= 0 (second pair) (board-ymax b))))
+
+(defun around (pos dxs dys b &aux out)
+(with-slots (x y ) pos
+(dolist (dx dxs out)
+  (dolist (dy dys)
+    (let* ((x1   (+ x dx))
+           (y1   (+ y dy))
+           (new `(,x1 ,y1)))
+      (if (and (ok  b new)
+               (or (not (= x x1)) (not (= y y1))))
+        (push `(,x1 ,y1) out)))))))
+
 
 ;;Create a two-dimensional list of coordinates based on the grid size.
 (defun get-grid-values (size-sq)
@@ -39,25 +65,13 @@
       (dotimes (j size-sq)
         (setf (aref out i j) (make-cell :i i :j j ))))))
  
-;;Get the list of neighbors for a cell with coordinates (x,y). 
-(defun get-neighbors (x y)
-  (let ((x0 (1- x)) (y0 (1- y)) (x1 (1+ x)) (y1 (1+ y)))
-    `((,x0 ,y0) (,x0 ,y) (,x0 ,y1)
-      (,x  ,y0) (,x  ,y) (,x  ,y1)
-      (,x1 ,y0) (,x1 ,y) (,x1 ,y1))))
-
-;;Get the number of neighboring cells that are alive.    
-(defun get-num-alive (live-list neighbor-list &aux (out 0))
-  (dolist (neighbor  neighbor-list num-alive)
-      (if (member neighbor live-list :test #'equal)
-        (incf out))))
-
 ;;Determine whether a given cell will be alive in the next generation.          
-(defun will-live (num-alive currently-alive)
-  (cond ((< num-alive 2) nil)
-    ((and (= num-alive 2) currently-alive) t)
-    ((= num-alive 3) t)
-    ((> num-alive 3) nil)))
+(defun will-live (pos b)
+  (let ((n (alives b pos)))
+    (cond ((< n 2) nil)
+          ((and (= n 2) (alive b pos)) t)
+          ((= n 3) t)
+          ((> n3) nil)))
 
 ;;Print on the command line. Keep track of the x coordinate and enter new lines.
 (defun draw (live-cells grid size-sq)
