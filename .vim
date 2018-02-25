@@ -52,4 +52,5 @@ set lispwords+=doh
 set lispwords+=defone
 set lispwords+=defmemo
 set lispwords+=keep
+set lispwords+=labels
 
