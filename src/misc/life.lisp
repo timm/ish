@@ -1,5 +1,20 @@
 (load "patterns")
 
+(defun clear ()
+  #+clisp
+  (shell "clear")
+  #+sbcl
+  (sb-ext:run-program "/bin/sh" (list "-c" "clear") 
+                      :input nil :output *standard-output*))
+
+(defun command-line ()
+  #+clisp ext:*args*
+  #+sbcl (cdr sb-ext:*posix-argv*))
+
+(defun run-command-line (fn argv)
+  (setf argv (mapcar 'read-from-string argv))
+  (apply fn argv))
+
 (defun life (&key (model "") (p 0.2) (pause 0.2) 
                   (xmax 50) (ymax 50) (lives 100) (inits))
   (labels (
@@ -26,11 +41,13 @@
      (draw-board (b) 
                  (sleep pause)
                  (clear)
-                 (dotimes (y ymax)
-                   (format t "~&|")
-                   (dotimes (x xmax)
-                     (format t "~a" (if (alive b x y) "X" " ")))
-                   (format t "|~%")))
+                 (princ 
+                   (with-output-to-string (s)
+                     (dotimes (y ymax)
+                       (format s "~&|")
+                       (dotimes (x xmax)
+                         (format s "~a" (if (alive b x y) "X" " ")))
+                       (format s "|~%")))))
      (main (old &aux (new (board)) changed)
            (draw-board old)
            (format t "~a:~a~%"  model lives)
@@ -44,53 +61,28 @@
              (if changed (main new)))))
     (main (board0 (board)))))
 
-(defun clear ()
-  #+clisp
-  (shell "clear")
-  #+sbcl
-  (sb-ext:run-program "/bin/sh" (list "-c" "clear") 
-                      :input nil :output *standard-output*))
+(defun main (&key model (p 0.2) (pause 0.2) 
+                  (xmax 100) (ymax 50) (lives 100))
+  (labels (
+     (coords (str)
+             (let (out
+                    (x 0)
+                    (y 5))
+               (loop for c across str do 
+                     (case c
+                       (#\Newline (incf y)
+                        (setf x 5))
+                       (#\Space   nil)
+                       (#\*       (push `(,x ,y) out)
+                        (incf x))
+                       (#\.       (incf x))))
+               (reverse out))))
+    (if model
+      (let ((inits (coords (cdr (assoc model +patterns+)))))
+        (life :xmax xmax :lives lives :ymax ymax  :pause pause
+              :p p :model model :inits inits))
+      (dolist (model +patterns+)
+        (main :model (car model) :p p :pause pause 
+              :xmax xmax :ymax ymax :lives lives)))))
 
-(defun coords(str)
-  (let (out
-         (x 0)
-         (y 9))
-    (loop for c across str do 
-          (case c
-            (#\Newline (incf y)
-                       (setf x 10))
-            (#\Space   nil)
-            (#\*       (push `(,x ,y) out)
-                       (incf x))
-            (#\.       (incf x))))
-    (reverse out)))
-
-(defun run-command-line (argv)
-  "just symbols & keywords & numbers (not strings or lists)"
-  (setf argv (mapcar 'read-from-string argv))
-  (print argv)
-  (apply #'main argv))
-
-
-(defun command-line ()
-  #+clisp ext:*args*
-  #+sbcl sb-ext:*posix-argv*)
-
-(defun main (&key (model "") (p 0.2) (pause 0.2) 
-                  (xmax 50) (ymax 50) (lives 100))
-  (let ((inits (coords (cdr (assoc model +patterns+)))))
-    (print model)
-    (print inits)
-    (life :xmax xmax :lives lives :ymax ymax  :pause pause
-          :p p 
-          :model model
-          :inits inits)))
-
-(defun all ()
-  (dolist (one +patterns+)
-     (life :xmax 100   :lives 100 :ymax 100  :pause 0.0
-           :model (car one)
-           :inits (coords 
-                 (cdr (assoc (car one)  +patterns+))))))
-
-(run-command-line (command-line))
+(run-command-line #'main (command-line))
