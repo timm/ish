@@ -1632,10 +1632,10 @@
       ))
 
 (defun main (sym)
-  (life :xmax 100 :lives 10000 :ymax 50  :pause 0.02
+  (life :xmax 100 :lives 10000 :ymax 50  :pause 0.2
         :inits (coords 
                  (cdr (assoc sym +patterns+)))))
 
 
-(main 'centinal)
+(main 'traffic-lights)
 
