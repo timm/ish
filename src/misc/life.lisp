@@ -30,10 +30,10 @@
                  (princ 
                    (with-output-to-string (s)
                      (dotimes (y ymax)
-                       (format s "~&")
+                       (format s "|~&")
                        (dotimes (x xmax)
                          (format s "~a" (if (alive b x y) "X" " ")))
-                       (format s "~%")))))
+                       (format s "|~%")))))
      (main (old &aux (new (board)) changed)
            (clear)
            (format t "~a:~a~%"  model lives)
