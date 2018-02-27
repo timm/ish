@@ -25,19 +25,20 @@
             (if (alive b x y) 
               (<= 2 n 3) ; enough friendly neigbhors 
               (= n 3))) ; time to get born
-     (draw-board (b) 
+     (draw-board (b banner) 
                  (sleep pause)
+                 (clear)
+                 (format t "~a~%" banner)
                  (princ 
                    (with-output-to-string (s)
                      (dotimes (y ymax)
-                       (format s "|~&")
+                       (format s " ")
                        (dotimes (x xmax)
                          (format s "~a" (if (alive b x y) "X" " ")))
-                       (format s "|~%")))))
+                       (format s " ~%")))))
      (main (old &aux (new (board)) changed)
-           (clear)
-           (format t "~a:~a~%"  model lives)
-           (draw-board old)
+           (draw-board old 
+                       (format nil "~a:~a"  model lives))
            (when (> (decf lives) 0)
              (dotimes (x xmax)
                (dotimes (y ymax)
@@ -62,9 +63,15 @@
                      (#\.       (incf x))))
              (reverse out))
      (run (&optional model)
-          (let ((inits (coords (cdr (assoc model +patterns+)))))
-            (life :xmax xmax :lives lives :ymax ymax  :pause pause
-                  :p p :model model :inits inits))))
+          (if p
+            (life :xmax xmax :ymax ymax :lives lives
+                  :pause pause :p p)
+            (let* ((pat   (cdr (assoc model +patterns+)))
+                   (inits (and pat (coords pat))))
+              (if inits
+                (life :xmax xmax :lives lives :ymax ymax  :pause pause
+                      :p p :model model :inits inits)
+                (princ (mapcar #'car +patterns+)))))))
     (cond (p     (run))
           (model (run model))
           (t     (dolist (x +patterns+)
