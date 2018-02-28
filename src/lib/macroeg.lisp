@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load "ish.lisp")) 
+(unless (fboundp 'establish) (load "../ish/ish.lisp")) 
 (establish
   "test"
   "macro")

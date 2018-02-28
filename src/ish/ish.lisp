@@ -14,7 +14,7 @@
 (let (files ; all files in this directory tree 
        seen ; all files already loaded
        (pats; where to find files
-          '("./*.lisp" "./*/*.lisp" "./*/*/*.lisp"))
+          '("../*/*.lisp"))
        )
   (labels ((known (x) (cdr (assoc x files :test #'equalp))))
     ; ---------------------------------------------

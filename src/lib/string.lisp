@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load "ish.lisp")) (garnish "
+(unless (fboundp 'establish) (load "../ish/ish.lisp")) (garnish "
 ;;;;
 ;;;; ## [STRING.LISP](string.lisp)
 ;;;; ")

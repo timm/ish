@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load "ish.lisp")) (garnish "
+(unless (fboundp 'establish) (load "../ish/ish.lisp")) (garnish "
 ;;;;
 ;;;; ## [TESTS.LISP](tests.lisp)
 ;;;;    
@@ -12,7 +12,7 @@
 (pushnew :dont-test *features*)
 
 ; load files
-(dolist (pat '("./*eg.lisp" "./*/*eg.lisp"))
+(dolist (pat '("../*/*eg.lisp" ))
   (dolist (f (directory pat))
     (establish (pathname-name f))))
 

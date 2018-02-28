@@ -1,4 +1,4 @@
-(unless (fboundp 'establish) (load "ish.lisp")) (garnish "
+(unless (fboundp 'establish) (load "../ish/ish.lisp")) (garnish "
 ;;;;
 ;;;; ## [TABLE.LISP](table.lisp)
 ;;;;
@@ -82,11 +82,10 @@
                (row) "wrong length ~a" row)
        t)
     (col+ (txt pos tab)
-       (funcall
-         (make-instance (if (numeric? txt) 'num 'sym))
-         :name  txt 
-         :pos   pos 
-         :table tab))
+          (make-instance (if (numeric? txt) 'num 'sym) :name  txt :pos   pos :table tab)
+          (print 1)
+          (make-instance (if (numeric? txt) 'num 'sym) :name  txt :pos   pos :table tab)
+          )
     (row+ (tab cells)
        (let ((row (make-instance 'row
                      :table tab :cells (l->a cells))))
@@ -96,8 +95,11 @@
     )
    ;; now we can begin
    (doitems (txt pos cols)
-     (if (okCol txt)
+     (print 5)
+     (when (okCol txt)
+        (print (? tab cols))
          (push (col+ txt pos tab) (? tab cols ))))
+   (print 10)
    (dolist (eg egs)
      (if (okRow tab eg) (row+ tab eg)))
    tab))
