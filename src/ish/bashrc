@@ -1,10 +1,12 @@
+# /* vim: set filetype=sh : */
+
 here() { cd $1; echo "$PWD"; }
 
 Here=$(here ..)
 
 if [ -z "$me" ]; then
-  PS1="ELL::$PS1"
-  PROMPT="| $PROMPT"
+  PS1=":$PS1"
+  PROMPT=":$PROMPT"
   me=ell
 fi
 
