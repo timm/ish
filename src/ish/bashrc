@@ -1,13 +1,17 @@
-Here=$PWD
-if [ -z "$Here/$me" ]; then
+here() { cd $1; echo "$PWD"; }
+
+Here=$(here ..)
+
+if [ -z "$me" ]; then
   PS1="ELL::$PS1"
+  PROMPT="| $PROMPT"
   me=ell
 fi
 
 ed() { # ed FILE   : Edit a file with my vim bindings.
   local f=$1
   if [ ! -f "$f" ]; then f=$f.lisp; fi
-  vim -u $Here/../.vim $f
+  vim -u $Here/ish/vimrc $f
 }
 
 hi() { # hi        : Update files from git.
