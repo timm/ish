@@ -14,6 +14,8 @@
 ;;; ## Table
 ;;; ")
 
+(defthing table keeper (name) (cols) (egs))
+
 (defun prefix (x y) (eql (char (symbol-name x) 0) y))
 
 (defun skip?    (x) (prefix x #\?))
@@ -24,8 +26,6 @@
 (defun goal?    (x) (or (klass? x) (less? x) (more? x)))
 (defun numeric? (x) (or (num? x)   (less? x) (more? x)))
 (defun sym?     (x) (and (not (num? x)) (not (goal? x))))
-
-(defthing table keeper (name) (cols) (egs))
 
 (defun someCols (tab fn)
   (select #'(lambda (x) (funcall fn (?  x name)))
@@ -81,10 +81,12 @@
                     (length (? tab cols)))
                (row) "wrong length ~a" row)
        t)
-    (col+ (txt pos tab)
-          (make-instance (if (numeric? txt) 'num 'sym) :name  txt :pos   pos :table tab)
-          (print 1)
-          (make-instance (if (numeric? txt) 'num 'sym) :name  txt :pos   pos :table tab)
+    (col+ (txt pos tab what)
+          (make-instance what  :name  txt :pos   pos :table tab)
+          (print 1000)
+          (make-instance what :name  txt :pos   pos :table tab)
+          (print 2000)
+          (make-instance what :name  txt :pos   pos :table tab)
           )
     (row+ (tab cells)
        (let ((row (make-instance 'row
@@ -95,11 +97,15 @@
     )
    ;; now we can begin
    (doitems (txt pos cols)
-     (print 5)
+     (print 5) (print txt) (print (okCol txt))
      (when (okCol txt)
-        (print (? tab cols))
-         (push (col+ txt pos tab) (? tab cols ))))
-   (print 10)
+       (print 10)
+        (print (slot-value  tab 'cols))
+        (print 3000)
+         (let* ((ako  (if (numeric? txt) 'num 'sym ))
+               (what (col+ txt pos tab ako)))
+           (push what (? tab cols )))))
+   (print 70000)
    (dolist (eg egs)
      (if (okRow tab eg) (row+ tab eg)))
    tab))
