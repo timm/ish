@@ -5,11 +5,6 @@
 ;;;; Tricks for handling lisp lists.
 ;;;; ")
 
-(defun _1 (lst) "Return 1st item" (first lst))
-(defun _2 (lst) "Return 2nd item" (second lst))
-(defun _3 (lst) "Return 3rd item" (third lst))
-(defun _4 (lst) "Return 4th item" (fourth lst))
-(defun _5 (lst) "Return 5th item" (fifth lst))
 (defun head (lst) "Return first item" (car lst))
 (defun tail (lst) "Return last item" (car (last lst)))
 

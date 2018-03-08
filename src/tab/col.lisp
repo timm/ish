@@ -18,9 +18,9 @@
 ;;; ")
 
 (defthing col keeper  
-  (n 0) (name) (pos) (table))
+  (n 0) (name) (pos) (_table))
 
-(defmethod add ((c col) x &key (filter #'indentity))
+(defmethod add ((c col) x &key (filter #'identity))
   "Add numbers to column."
   (unless (eql c #\?) ; skip ignores
     (let ((y (funcall filter x)))
