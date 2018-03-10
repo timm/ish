@@ -103,9 +103,8 @@
 (defmethod row+ ((tab table) lst)
   "Add a row to the table."
   (row+ 
-      (make-instance 'row
-           :_table tab :cells (l->a lst))
-      lst))
+    (make-instance 'row :_table tab :cells (l->a lst))
+    lst))
 
 (defun data (&key name cols egs)
   "Make a table from name, column names, examples."
