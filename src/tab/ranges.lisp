@@ -26,10 +26,9 @@
  (labels ((x     (z)   (funcall f z)) 
           (order (a b) (< (x a) (x b)))
           (same  (top current next)
-                 (or (< (- (x current) (x top)) (x epsilon))
+                 (or (< (- (x current) (x top))  epsilon)
                      (eql (x current) (x next))))
           (main  (m lst &aux tmp) 
-                 (print 10000)
                  (let ((top (car lst)))
                    (while 
                      (and lst (>= (decf m) 0))
