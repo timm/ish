@@ -28,7 +28,7 @@ bye() { # bye       : Push files back to git.
 
 eg() { # eg FILE   : Run the unit tests for FILE.
   for i in ../*/${1}eg.lisp; do
-     clisp $i
+     time clisp $i
      return 0
   done
 }

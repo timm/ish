@@ -73,9 +73,9 @@
                     (make-instance 'table :name name)))
   "Build table for name, col, egs"
   (labels 
-    ((okCol (txt)
+    ((okCol? (txt)
             (not (skip? txt)))
-     (okRow (row) 
+     (okRow? (row) 
             (assert (eql (length row) (length (? tab cols)))
                     (row) "wrong length ~a" row)
             t)
@@ -90,10 +90,10 @@
                (add col (cell row col))))))
     ;; now we can begin
     (doitems (txt pos cols)
-      (if (okCol txt)
+      (if (okCol? txt)
         (push (col+ txt pos) 
               (? tab cols))))
     (dolist (eg egs tab)
-      (if (okRow eg) 
+      (if (okRow? eg) 
         (push (row+ eg) 
               (? tab rows))))))

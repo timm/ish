@@ -3,11 +3,13 @@
 (establish
   "test"
   "table"
-  "weathersome")
+  "time"
+  "weathersome"
+  "pima_diabetes"
+) 
 
-(deftest _table () 
-  (weathersome)
-)
+(deftest _table () "small" (weathersome))
+(deftest _table2 () "large" (print (timeit #'pima_diabetes)))
 
 (tests)
 

@@ -85,7 +85,7 @@
 (defun pima_diabetes ()
   (data
     :name 'pima_diabetes
-    :columns '(preg plas pres skin insu mass pedi age class)
+    :cols '($preg $plas $pres $skin $insu $mass $pedi $age !class)
     :egs
     '(
       (6 148 72 35 0 33.6 0.627 50 tested_positive)

@@ -19,3 +19,10 @@
     (get-decoded-time)
     (declare (ignore sec min hr day mon  dow dst-p tz))
     yr))
+
+(defun timeit (f &optional (n 20))
+  (let (t2 (t1 (get-internal-run-time)))
+    (dotimes (i n) 
+      (funcall f))
+   (setf t2 (get-internal-run-time))
+   (float (/  (- t2 t1) (* n internal-time-units-per-second)))))
