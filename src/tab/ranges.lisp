@@ -18,7 +18,7 @@
    `epsilon` not supplied, compute it form `cohen`
    times the standard deviation of the distribution."
   (setf epsilon (or epsilon
-                    (* cohen (? (nums lst :filter f) sd)))
+                    (* cohen (? (nums lst :filter x) sd)))
         n       (if (>= (mod (length lst) n) 0)
                     (1+ n)
                     n))
