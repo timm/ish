@@ -50,5 +50,6 @@ set lispwords+=while
 set lispwords+=doitems
 set lispwords+=doh
 set lispwords+=defone
-set lispwords+=defmemo
 set lispwords+=keep
+set lispwords+=defmethod!
+set lispwords+=defmemo

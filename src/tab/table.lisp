@@ -16,7 +16,6 @@
 ;;; ")
 
 (defthing table keeper (name) (cols) (rows))
-(defthing row keeper (_table) (cells))
 
 (defun prefix (x y) (eql (char (symbol-name x) 0) y))
 
@@ -33,11 +32,11 @@
   (select #'(lambda (x) (funcall fn (?  x name)))
           (? tab cols)))
 
-(defmethod more!  ((tab  table)) (keep tab (someCols tab #'more?)))
-(defmethod less!  ((tab  table)) (keep tab (someCols tab #'less?)))
-(defmethod klass! ((tab  table)) (keep tab (someCols tab #'klass?)))
-(defmethod num!   ((tab  table)) (keep tab (someCols tab #'num?)))
-(defmethod sym!   ((tab  table)) (keep tab (someCols tab #'syns?)))
+(defmethod! more!  ((tab  table)) (someCols tab #'more?))
+(defmethod! less!  ((tab  table)) (someCols tab #'less?))
+(defmethod! klass! ((tab  table)) (someCols tab #'klass?))
+(defmethod! num!   ((tab  table)) (someCols tab #'num?))
+(defmethod! sym!   ((tab  table)) (someCols tab #'syns?))
 
 (defmethod klassCol ((tab table)) (car (klass? tab)))
 
@@ -46,32 +45,21 @@
 ;;; ## Row
 ;;; ")
 
+(defthing row keeper (_table) (cells))
+
 (defmethod cell ((r row) col)
   (aref (? r cells) (? col pos)))
 
-(defmethod okRow? ((r row) lst) 
-  (assert (eql (length lst) (length (? r _table cols)))
-          (lst) "wrong length ~a" lst)
-  t)
+(defmethod!  klassValue! ((r row))
+	(aref
+		(? r cells)
+		(? (klassCol (? r table)) 
+			 pos)))
 
-(defmethod row+ ((r row) lst)
-  (when (okRow? r lst)
-    (push r (? r _table rows))
-    (dolist (col (? r _table cols) r)
-      (add col (cell r col)))))
-
-(defmethod  klassValue! ((r row))
-  (keep r
-    (aref
-      (? r cells)
-      (? (klassCol (? r table)) 
-         pos))))
-
-(defmethod klassRange! ((r row))
-  (keep r
-    (range
-      (klassCol (? r table))
-      (klassValue r))))
+(defmethod! klassRange! ((r row))
+	(range
+		(klassCol (? r table))
+		(klassValue r)))
 
 (garnish "
 ;;; 
@@ -80,35 +68,32 @@
 ;;; How to read tables in from data.
 ;;; ")
 
-
-(defmethod okCol? ((tab table) txt)
-  "If no skip character, col is ok to add."
-  (not (skip? txt)))
-
-(defmethod col+ ((tab table) txt pos)
-  "Create one column"
-  (make-instance 
-    (if (numeric? txt) 'num 'sym )
-    :name   txt 
-    :pos    pos 
-    :_table tab))
-
-(defmethod cols+ ((tab table) lst)
-  "Add a list of cols to the table."
-  (doitems (txt pos lst tab)
-    (if (okCol? tab txt)
-      (push (col+ tab txt pos) 
-            (? tab cols)))))
-
-(defmethod row+ ((tab table) lst)
-  "Add a row to the table."
-  (row+ 
-    (make-instance 'row :_table tab :cells (l->a lst))
-    lst))
-
-(defun data (&key name cols egs)
-  "Make a table from name, column names, examples."
-  (let ((tab (make-instance 'table :name name)))
-    (cols+ tab cols)
+(defun data (&key name cols egs
+             &aux (tab 
+                    (make-instance 'table :name name)))
+  "Build table for name, col, egs"
+  (labels 
+    ((okCol (txt)
+            (not (skip? txt)))
+     (okRow (row) 
+            (assert (eql (length row) (length (? tab cols)))
+                    (row) "wrong length ~a" row)
+            t)
+     (col+ (txt pos)
+           (make-instance 
+              (if (numeric? txt) 'num 'sym )
+              :name txt :pos pos :_table tab))
+     (row+ (cells)
+           (let ((row (make-instance 'row
+                         :_table tab :cells (l->a cells))))
+             (dolist (col (? tab cols) row)
+               (add col (cell row col))))))
+    ;; now we can begin
+    (doitems (txt pos cols)
+      (if (okCol txt)
+        (push (col+ txt pos) 
+              (? tab cols))))
     (dolist (eg egs tab)
-      (row+ tab eg))))
+      (if (okRow eg) 
+        (push (row+ eg) 
+              (? tab rows))))))

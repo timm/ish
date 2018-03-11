@@ -25,3 +25,8 @@
          (if ,found-p ,val
            (setf (gethash ',key _cache)
                  (progn ,@body)))))))
+
+(defmacro defmethod! (m args &body b)
+  (if (stringp (car b))
+    `(defmethod ,m (,@args) ,(car b) (keep ,(caar args) ,@(cdr b)))
+    `(defmethod ,m (,@args)          (keep ,(caar args) ,@b))))

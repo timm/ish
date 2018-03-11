@@ -48,7 +48,7 @@
   (mu 0) (m2 0) (sd 0)
   (lo most-positive-fixnum)
   (hi most-negative-fixnum)
-  (all))
+  )
 
 (defmethod valid ((n num) x)
   "Numbers have to be numbers."
@@ -64,8 +64,7 @@
             m2 (+ m2 (* delta (- x mu)))
             sd (if (< n 2)
                  sd
-                 (sqrt (/ m2 (- n 1)))))
-      (push x all))))
+                 (sqrt (/ m2 (- n 1))))))))
 
 (defmethod norm ((n num) x)  
   "Convert x to the range 0..1."
