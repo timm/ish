@@ -39,7 +39,5 @@
                   (list (copy-list tmp))
                   (cons tmp (main n lst))))))
       (values
-        (mapcar 
-          #'reverse 
-          (main n (sort lst #'order)))
+        (mapcar #'reverse (main n (sort lst #'order)))
         epsilon))))
