@@ -20,7 +20,7 @@
   (let* (
      (small   (* cohen (? (nums lst :filter x) sd)))
      (epsilon (or epsilon small)) 
-     (n       (if (>= (mod (length lst) n) 0) (1+ n) n)))
+     (n       (if (zerop (mod (length lst) n)) n (1+ n))))
     (labels (
        (v     (z)   (funcall x z)) 
        (order (a b) (< (v a) (v b)))
