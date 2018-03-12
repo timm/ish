@@ -6,11 +6,6 @@
 
 (deftest _items() 
   (let ((lst '(a b c d e f)))
-    (test 'a (_1 lst))
-    (test 'b (_2 lst))
-    (test 'c (_3 lst))
-    (test 'd (_4 lst))
-    (test 'e (_5 lst))
     (test 'a (head lst))
     (test 'f (tail lst))
 ))
