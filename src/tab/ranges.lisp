@@ -25,8 +25,10 @@
        (v     (z)   (funcall x z)) 
        (order (a b) (< (v a) (v b)))
        (same  (top current next)
-              (or (< (- (v current) (v top))  epsilon)
-                  (eql (v current) (v next))))
+              (or 
+                (eql (v current) (v next))
+                (< (- (v current) (v top))  epsilon)
+                ))
        (main  (m lst &aux tmp) 
               (let ((top (car lst)))
                 (while 
@@ -36,8 +38,8 @@
                   (and lst (same top (car tmp) (car lst)))
                   (push (pop lst) tmp))
                 (if (< (length lst) n)  
-                  (list (copy-list tmp))
-                  (cons tmp (main n lst))))))
+                  (list (copy-list lst))
+                  (cons (reverse tmp) (main n lst))))))
       (values
-        (mapcar #'reverse (main n (sort lst #'order)))
+        (main n (sort lst #'order))
         epsilon))))
