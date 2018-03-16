@@ -18,17 +18,17 @@
    `epsilon` not supplied, compute it form `cohen`
    times the standard deviation of the distribution."
   (let* (
-     (small   (* cohen (? (nums lst :filter x) sd)))
-     (epsilon (or epsilon small)) 
-     (n       (if (zerop (mod (length lst) n)) n (1+ n))))
+     (xnums   (nums lst :filter x))
+     (epsilon (or epsilon 
+                  (* cohen (? xnums sd))))
+     (growp   (> (mod (length lst) n) 0))
+     (n       (if growp (1+ n) n)))
     (labels (
        (v     (z)   (funcall x z)) 
        (order (a b) (< (v a) (v b)))
        (same  (top current next)
-              (or 
-                (eql (v current) (v next))
-                (< (- (v current) (v top))  epsilon)
-                ))
+              (or (eql (v current) (v next))
+                  (< (- (v current) (v top)) epsilon)))
        (main  (m lst &aux tmp) 
               (let ((top (car lst)))
                 (while 
