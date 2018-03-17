@@ -15,28 +15,28 @@
   (let ((lst (loop for _ upto 20000 
                    collect (make-emp :age (* 0.01 
                               (round (expt (randf) 2) 0.01))))))
-    (dolist (one (ranges lst :cohen 0.2 :x #'emp-age))
+    (dolist (one (xranges lst :cohen 0.2 :f #'emp-age))
       (format t "~a "   (length one)))
  )
 )
 (deftest _data1 ()
   "daa"
-  (print 1000)
   (let ((tbl (pima_diabetes)))
     (dolist (col (num! tbl))
       (labels ((x (row) (cell row col)))
         (multiple-value-bind (bins epsilon)
-          (ranges (? tbl rows) :x #'x )
+          (xranges (? tbl rows) :f #'x )
           (format t "~%~a ~5,2f~%" (? col name) epsilon)
           (dolist (bin  bins)
-             (format t "~a ~a ~%" (length bin) (mapcar #'x bin))
-             ))))))
+            (let ((bin (mapcar #'x bin)))
+             (format t "#~a ~a .. ~a ~%" (length bin) (head bin) (tail bin))
+             )))))))
 
 (defun rangeDemo (lst)
   (multiple-value-bind (bins epsilon)
-    (ranges lst :n 20)
+    (xranges lst :n 20)
     (print epsilon)
-    (dolist (one (ranges lst ))
+    (dolist (one (xranges lst ))
       (format t "#~a ~a .. ~a~%"   
               (length one) (first one) (tail one)))))
 
