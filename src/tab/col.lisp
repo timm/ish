@@ -73,6 +73,10 @@
        (+ (- hi lo)
           (/ 1 most-positive-fixnum)))))
 
+(defmethod xpect ((nu num) field n)
+   (float (* (/ (? nu n) n) 
+             (slot-value nu field))))
+
 (garnish "
 ;;;
 ;;; Some columns hold `sym`bols.

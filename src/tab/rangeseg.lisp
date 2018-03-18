@@ -116,4 +116,16 @@
       387 392 402 415 440 465 474 478 480 480 485 495 495 510 540 543 545
       579 600 680 744 846 )))
 
+(deftest _pairs ()
+  (reset-seed 1)
+  (labels 
+    ((pairs (n) (list (float n) 
+                    (cond ((< n 0.3) (+ 0.15 (randf 0.1)))
+                          ((< n 0.6) (+ 0.55 (randf 0.1)))
+                          (t         (+ 0.95 (randf 0.1)))))))
+   (let* ((lst (loop for i from 1 upto 100 
+                     collect (expt (/ i 100) 2)))
+          (pairs  (mapcar #'pairs lst)))
+     (print (xyranges pairs)))))
+ 
 (tests)
