@@ -1,6 +1,7 @@
 
 -*- mode: gitignore; -*-
 *.swp
+*.swo
 *.bak
 
 # docco
